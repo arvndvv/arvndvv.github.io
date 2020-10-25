@@ -1,0 +1,96 @@
+/*font Roboto*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*--*/
+
+ :root {
+    --dark: #151419;
+    --shadeOne: #ea234c;
+    --shadeTwo: #c12f31;
+    --shadeThree: #10e275;
+    --yellow: #ecc410;
+    --flame: #f6b830;
+    --light: #fbfdfc;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    padding: 1.2em;
+    background: var(--dark);
+    color: var(--light);
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+}
+
+.desktop-close {
+    transform: translateY(-4em);
+}
+
+.nav ul {
+    list-style-type: none;
+}
+
+.nav ul li {
+    pointer-events: none;
+    float: left;
+    padding: 0 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    pointer-events: visible;
+    color: var(--light);
+    font-size: 0.65em;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.4s color cubic-bezier(0.4, 0, 1, 1);
+}
+
+.nav ul li:hover a,
+.nav ul li:hover {
+    color: var(--shadeOne);
+    -webkit-transform: scale(1.2);
+}
+
+.nav ul .active {
+    -webkit-transform: scale(1.2);
+}
+
+.nav ul .active a {
+    color: var(--shadeOne);
+    border-bottom: 2px solid var(--shadeOne);
+}
+
+.nav .brand {
+    margin-left: 5vw;
+    font-size: 1.2em;
+}
+
+.nav .brand-logo {
+    color: var(--light);
+    padding: 5px 8px;
+    font-weight: 700;
+    background: var(--shadeOne);
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.nav ul {
+    margin-right: 5vw;
+}

@@ -1,0 +1,5 @@
+.about {
+    min-height: 200vh;
+    width: 100%;
+    background: var(--light);
+}

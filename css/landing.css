@@ -1,0 +1,165 @@
+.landing {
+    padding: calc(5vw + 1.2em);
+    background: var(--dark);
+    min-height: 100vh;
+    color: var(--light);
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.landing-wave1,
+.landing-wave2 {
+    position: absolute;
+    left: 0;
+    bottom: -5em;
+    width: 200vw;
+    transition: all 0.5s ease;
+}
+
+.landing-wave1 {
+    z-index: 2;
+    fill: var(--shadeOne);
+    transform: scale(1.35) rotateX(0deg) rotateY(180deg);
+    animation: waves 25s ease infinite alternate 1s;
+}
+
+.landing-wave2 {
+    fill: var(--shadeTwo);
+    left: -4px;
+    bottom: -0.5em;
+    transform: scale(1.35) rotateX(0deg) rotateY(180deg);
+    z-index: 0;
+    animation: waves 25s ease infinite alternate 2s;
+}
+
+@keyframes waves {
+    0% {
+        transform: scale(1.35) rotateX(0deg) rotateY(180deg) translate(0px, 0px);
+    }
+    20% {
+        transform: scale(1.35) rotateX(20deg) rotateY(185deg) translate(-10vw, -5px);
+    }
+    60% {
+        transform: scale(1.35) rotateX(-15deg) rotateY(190deg) translate(20vw, 5px);
+    }
+    100% {
+        transform: scale(1.35) rotateX(-25deg) rotateY(170deg) translate(10vw, -10px);
+    }
+}
+
+.landing-data {
+    margin-top: 10%;
+    z-index: 2;
+    padding: 25px;
+    height: fit-content;
+    position: relative;
+    z-index: 10;
+}
+
+.landing-img {
+    margin-top: 20%;
+    margin-left: 20%;
+    width: 40%;
+    background-position: center center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    height: 10em;
+    border-radius: 20em;
+    background-color: var(--light);
+    filter: drop-shadow(4px 4px 10px var(--flame));
+    position: relative;
+    z-index: 1;
+    transform: translate(40%, -111%);
+    transition: all 1s ease;
+    animation: rocket 15s ease-in-out infinite;
+}
+
+.landing-img img {
+    width: 65%;
+}
+
+.landing-img code {
+    position: absolute;
+    top: 50%;
+    color: #e9494b;
+    left: 50%;
+    transform: translate(-20%, -50%);
+}
+
+.my-name {
+    font-size: 3em;
+}
+
+.my-name::before {
+    position: absolute;
+    content: "Hi, Iam";
+    color: var(--dark);
+    width: fit-content;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 5px 10px 5px 10px;
+    top: 0px;
+    overflow: hidden;
+    background: var(--flame);
+}
+
+.my-name::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 20%;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid var(--flame);
+    border-right: 15px solid transparent;
+}
+
+.my-desig {
+    font-weight: 400;
+}
+
+.btn-landing {
+    border: none;
+    padding: 5px 15px 5px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 10px;
+    margin-top: 3em;
+    transform: translateX(-10px);
+    color: var(--light);
+    background: transparent;
+    border: 5px solid var(--light);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out 0.1s;
+}
+
+.btn-landing:hover {
+    color: var(--shadeTwo);
+    border: 5px solid transparent;
+    background: var(--light);
+}
+
+@keyframes rocket {
+    0% {
+        filter: drop-shadow(4px 4px 10px #f2a932), ;
+        transform: translate(40%, -101%) rotate(0deg);
+    }
+    35% {
+        filter: drop-shadow(-4px 5px 10px #ec950a), drop-shadow(-4px 10px 20px #f24832);
+        transform: translate(50%, -120%) rotate(10deg);
+    }
+    55% {
+        filter: drop-shadow(1px 10px 15px #f28832), drop-shadow(8px 8px 15px #f24832);
+        transform: translate(50%, -150%) rotate(10deg);
+    }
+    85% {
+        filter: drop-shadow(4px 4px 10px #f27f32);
+        transform: translate(50%, -140%) rotate(-10deg);
+    }
+    100% {
+        filter: drop-shadow(4px 4px 10px #f2a932);
+        transform: translate(40%, -101%) rotate(0deg);
+    }
+}
