@@ -29,7 +29,7 @@
 
 .nav {
     padding: 1.2em;
-    background: var(--dark);
+    /*background: var(--dark);*/
     color: var(--light);
     position: fixed;
     width: 100%;
@@ -80,15 +80,19 @@
 .nav .brand {
     margin-left: 5vw;
     font-size: 1.2em;
+    position: relative;
 }
 
 .nav .brand-logo {
-    color: var(--light);
-    padding: 5px 8px;
-    font-weight: 700;
+    width: 2em;
+    top: -5px;
+    left: -45px;
+    height: 2em;
     background: var(--shadeOne);
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 10px;
+    background: url(../img/logo.png);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .nav ul {
