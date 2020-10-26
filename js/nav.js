@@ -32,10 +32,10 @@ document.addEventListener("scroll", function() {
     //let windowHeight = window.innerHeight;
     let windowHeight = document.documentElement.clientHeight;
 
-    cError("home:" + offset(home).top)
-    cError("skill:" + offset(skills).top)
-    cRemarks("scrollpos:" + scrollPos)
-        //! auto marking active section
+    //cError("home:" + offset(home).top)
+    //cError("skill:" + offset(skills).top)
+    //cRemarks("scrollpos:" + scrollPos)
+    //! auto marking active section
     let navItems = document.querySelectorAll('.nav ul li')
     if (scrollPos + 80 < offset(contact).top) {
         if (scrollPos + 80 < offset(portfolio).top) {
@@ -110,14 +110,14 @@ document.addEventListener("mousemove", function(event) {
 let hoveredMenu = false;
 
 function handleMouseMove(e) {
-    cWarn("mouse moved")
-    cBlackGreen(hoveredMenu)
+    //cWarn("mouse moved")
+    //cBlackGreen(hoveredMenu)
     let scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
     if (!(scrollPos + 80 < offset(about).top)) {
         let y = e.clientY;
-        cRemarks(y)
+        //cRemarks(y)
         if (!hoveredMenu) {
-            cSuccess("")
+            //cSuccess("")
             if (y <= 60) {
                 hoveredMenu = true;
                 nav.classList.remove("desktop-close");

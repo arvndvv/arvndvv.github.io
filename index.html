@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Arvndvv</title>
-    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/utilities.css">
     <link rel="stylesheet" href="./css/landing.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/skills.css">
+
+    <link rel="stylesheet" href="./css/portfolio.css">
+
 </head>
 
 <body>
@@ -43,12 +48,49 @@
         </section>
 
 
-        <section id="about" class="about">
-            <h1>About</h1>
+        <section id="about" class="about grid">
+            <div class="about-img-wrapper">
+                <div class="about-img"></div>
+            </div>
+            <div class="about-data-wrapper">
+                <h2 class="heading">About Me</h2>
+                <h5 class="optional-desc slant">Developer | Creative</h5>
+                <p class="abt-summary">I am a tech lover. I have interest in many fields of Tech which include, Programming, Web developing, Penitration Testing. I like to see myself contributing to amazing prouducts or inventions in the future. Graphic/ UI/ Ux design is one
+                    of my other skills which makes me creative.</p>
+                <span class="social flex">
+                    <a href=""> <i class="fab fa-linkedin-in"></i></a>
+                    <a href=""><i class="fab fa-github"></i></a>
+                    <a href=""><i class="fab fa-blogger-b"></i></a>
+                    <a href=""><i class="fab fa-medium-m"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+
+
+
+                </span>
+            </div>
+            <div id="particles" class="particles">
+            </div>
 
         </section>
-        <section id="skills" class="skills">
-            <h1>skills</h1>
+        <section id="skills" class="skills ">
+            <h2 class="heading">Key Skills</h2>
+            <div class="skill-list flex">
+                <span class="skill-wrapper"><i class="skill " data-img="img/skills/html-5.svg" data-name="HTML5"></i></span>
+                <span class="skill-wrapper"><i class="skill css" data-img="img/skills/css.svg" data-name="CSS3"></i></span>
+                <span class="skill-wrapper"><i class="skill js" data-img="img/skills/js.png" data-name="JS"></i></span>
+                <span class="skill-wrapper"><i class="skill react" data-img="img/skills/react.svg" data-name="ReactJs"></i></span>
+                <span class="skill-wrapper"><i class="skill bootstrap" data-img="img/skills/bootstrap.svg" data-name="Bootstrap"></i></span>
+                <span class="skill-wrapper"><i class="skill php" data-img="img/skills/php.svg" data-name="PHP"></i></span>
+                <span class="skill-wrapper"><i class="skill sql" data-img="img/skills/sql.svg" data-name="SQL"></i></span>
+                <span class="skill-wrapper"><i class="skill python" data-img="img/skills/python.svg" data-name="Python"></i></span>
+                <span class="skill-wrapper"><i class="skill c" data-img="img/skills/c.webp" data-name="C"></i></span>
+                <span class="skill-wrapper"><i class="skill cpp"data-img="img/skills/cpp.png" data-name="C++"></i></span>
+                <span class="skill-wrapper"><i class="skill ps" data-img="img/skills/photoshop.svg" data-name="Photoshop"></i></span>
+                <span class="skill-wrapper"><i class="skill ai" data-img="img/skills/illustrator.svg" data-name="Illustrator"></i></span>
+                <span class="skill-wrapper"><i class="skill xd" data-img="img/skills/xd.svg" data-name="XD"></i></span>
+
+            </div>
 
         </section>
         <section id="portfolio" class="portfolio">
@@ -65,7 +107,12 @@
     <script src="./js/consoleStyles.js"></script>
 
     <script src="./js/nav.js"></script>
+
+    <script src="./js/particles.js"></script>
+    <script src="./js/skills.js"></script>
     <script src="./js/app.js"></script>
+    <div style="display: none;">Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
 </body>
 
 </html>

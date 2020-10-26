@@ -7,11 +7,21 @@
  :root {
     --dark: #151419;
     --shadeOne: #ea234c;
+    --shadeOneLight: #ff4b70;
     --shadeTwo: #c12f31;
     --shadeThree: #10e275;
     --yellow: #ecc410;
     --flame: #f6b830;
     --light: #fbfdfc;
+    --light-grey: #f7f7f7;
+    --medium-grey: #bfbfbf;
+    --dark-grey: #333;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
 * {
@@ -24,7 +34,40 @@
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.heading {
+    font-size: 2em;
+    color: var(--shadeOne);
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.heading::before {
+    content: "";
+    width: 2em;
+    height: 3px;
+    bottom: 0;
+    left: -10px;
+    background: var(--shadeOne);
+    position: absolute;
+}
+
+.optional-desc {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: var(--medium-grey);
+}
+
+.slant {
+    font-style: italic;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
 .nav {
@@ -34,6 +77,7 @@
     position: fixed;
     width: 100%;
     z-index: 50;
+    transition: all 0.5s ease;
 }
 
 .desktop-close {
