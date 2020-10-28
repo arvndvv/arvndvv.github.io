@@ -1,5 +1,5 @@
 .landing {
-    padding: calc(5vw + 1.2em);
+    padding: calc(5vw + 1.5em);
     background: var(--dark);
     min-height: 100vh;
     color: var(--light);
@@ -20,7 +20,7 @@
 .landing-wave1 {
     z-index: 2;
     fill: var(--shadeOne);
-    transform: scale(1.35) rotateX(0deg) rotateY(180deg);
+    transform: scale(1.55) rotateX(0deg) rotateY(180deg);
     animation: waves 25s ease infinite alternate 1s;
 }
 
@@ -28,29 +28,30 @@
     fill: var(--shadeTwo);
     left: -4px;
     bottom: -0.5em;
-    transform: scale(1.35) rotateX(0deg) rotateY(180deg);
+    transform: scale(1.55) rotateX(0deg) rotateY(180deg);
     z-index: 0;
     animation: waves 25s ease infinite alternate 2s;
 }
 
 @keyframes waves {
     0% {
-        transform: scale(1.35) rotateX(0deg) rotateY(180deg) translate(0px, 0px);
+        transform: scale(1.55) rotateX(0deg) rotateY(180deg) translate(0px, 0px);
     }
     20% {
-        transform: scale(1.35) rotateX(20deg) rotateY(185deg) translate(-10vw, -5px);
+        transform: scale(1.55) rotateX(20deg) rotateY(185deg) translate(-10.25vw, -5px);
     }
     60% {
-        transform: scale(1.35) rotateX(-15deg) rotateY(190deg) translate(20vw, 5px);
+        transform: scale(1.55) rotateX(-15deg) rotateY(190deg) translate(20.25vw, 5px);
     }
     100% {
-        transform: scale(1.35) rotateX(-25deg) rotateY(170deg) translate(10vw, -10px);
+        transform: scale(1.55) rotateX(-25deg) rotateY(170deg) translate(10.25vw, -10px);
     }
 }
 
 .landing-data {
-    margin-top: 10%;
+    margin-top: 8.5%;
     z-index: 2;
+    margin-left: 1%;
     padding: 25px;
     height: fit-content;
     position: relative;
@@ -70,7 +71,7 @@
     filter: drop-shadow(4px 4px 10px var(--flame));
     position: relative;
     z-index: 1;
-    transform: translate(40%, -111%);
+    transform: translate(30%, -101%);
     transition: all 1s ease;
     animation: rocket 15s ease-in-out infinite;
 }
@@ -83,12 +84,13 @@
     position: absolute;
     top: 50%;
     color: #e9494b;
+    font-size: 1.25em;
     left: 50%;
     transform: translate(-20%, -50%);
 }
 
 .my-name {
-    font-size: 3em;
+    font-size: 3.4em;
 }
 
 .my-name::before {
@@ -97,9 +99,9 @@
     color: var(--dark);
     width: fit-content;
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 16px;
     padding: 5px 10px 5px 10px;
-    top: 0px;
+    top: -2px;
     overflow: hidden;
     background: var(--flame);
 }
@@ -107,24 +109,25 @@
 .my-name::after {
     content: "";
     position: absolute;
-    top: 25px;
+    top: 26px;
     left: 20%;
     width: 0px;
     height: 0px;
     border-top: 10px solid var(--flame);
-    border-right: 15px solid transparent;
+    border-right: 18px solid transparent;
 }
 
 .my-desig {
     font-weight: 400;
+    font-size: 1.125em;
 }
 
 .btn-landing {
     border: none;
-    padding: 5px 15px 5px 15px;
+    padding: 6px 17px 6px 17px;
     font-weight: 600;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1.17em;
     margin: 10px;
     margin-top: 3em;
     transform: translateX(-10px);
@@ -144,7 +147,7 @@
 @keyframes rocket {
     0% {
         filter: drop-shadow(4px 4px 10px #f2a932), ;
-        transform: translate(40%, -101%) rotate(0deg);
+        transform: translate(30%, -101%) rotate(0deg);
     }
     35% {
         filter: drop-shadow(-4px 5px 10px #ec950a), drop-shadow(-4px 10px 20px #f24832);
@@ -152,14 +155,14 @@
     }
     55% {
         filter: drop-shadow(1px 10px 15px #f28832), drop-shadow(8px 8px 15px #f24832);
-        transform: translate(50%, -150%) rotate(10deg);
+        transform: translate(50%, -200%) rotate(10deg);
     }
     85% {
         filter: drop-shadow(4px 4px 10px #f27f32);
-        transform: translate(50%, -140%) rotate(-10deg);
+        transform: translate(50%, -180%) rotate(-10deg);
     }
     100% {
         filter: drop-shadow(4px 4px 10px #f2a932);
-        transform: translate(40%, -101%) rotate(0deg);
+        transform: translate(30%, -101%) rotate(0deg);
     }
 }

@@ -130,6 +130,7 @@ const togglePort = x => {
 
         document.querySelector("#open_card").style.opacity = 0;
         document.querySelector("#open_card").style.visibility = "hidden";
+        document.querySelector("#open_card").classList.remove("rotate");
         clearClass('#port-view');
         view.classList.add('view', 'design');
         view.style.width = "65%"

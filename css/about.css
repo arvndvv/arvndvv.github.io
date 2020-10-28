@@ -13,8 +13,8 @@
 }
 
 .about-img {
-    width: 13em;
-    height: 13em;
+    width: 15em;
+    height: 15em;
     border-radius: 50%;
     margin: 0 auto;
     position: relative;
@@ -24,8 +24,8 @@
 
 .about-img::before {
     content: "";
-    width: 12em;
-    height: 12em;
+    width: 14em;
+    height: 14em;
     position: absolute;
     border-radius: 50%;
     right: -10px;
@@ -35,13 +35,13 @@
 
 .about-img::after {
     content: "";
-    width: 11em;
-    height: 11em;
+    width: 13em;
+    height: 13em;
     position: absolute;
     border-radius: 50%;
     right: 5px;
     bottom: 5px;
-    background: url(../img/me.jpeg);
+    background: url(../img/me2.jpg);
     /*radial-gradient( rgba(255, 255, 255, 0.1) 55%, rgba(0, 0, 0, 0.7) 80%),*/
     background-size: 120%;
     background-position: 50% 70%;
@@ -59,9 +59,10 @@
     color: var(--dark-grey);
     font-weight: 400;
     max-width: 70%;
-    line-height: 1.5em;
+    line-height: 1.75em;
     text-align: justify;
     padding: 2em;
+    font-size: 1.25em;
 }
 
 .social {
@@ -73,7 +74,8 @@
 .social a {
     color: var(--dark-grey);
     transition: all 0.3s ease;
-    padding: 2px 3px;
+    padding: 3px 4px;
+    font-size: 1.25em;
     border-radius: 2px;
 }
 

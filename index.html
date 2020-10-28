@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./css/landing.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/skills.css">
-
     <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="stylesheet" href="./css/contact.css">
 
 </head>
 
@@ -36,8 +36,8 @@
             <div class="landing-data">
                 <h1 class="my-name">Aravind V V</h1>
                 <h4 class="my-desig">FullStack Developer</h4>
-                <button class="btn-landing">Portfolio</button>
-                <button class="btn-landing">Contact</button>
+                <a href="#portfolio"><button class="btn-landing">Portfolio</button></a>
+                <a href="#contact"> <button class="btn-landing">Contact</button></a>
             </div>
             <div class="landing-img"><img src="./img/landing.png" alt=""><code>et voilà! welcome to my website.</code></div>
             <svg class="landing-wave1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path  fill-opacity="1" d="M0,64L30,96C60,128,120,192,180,186.7C240,181,300,107,360,85.3C420,64,480,96,540,133.3C600,171,660,213,720,229.3C780,245,840,235,900,197.3C960,160,1020,96,1080,106.7C1140,117,1200,203,1260,229.3C1320,256,1380,224,1410,208L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
@@ -55,8 +55,8 @@
             <div class="about-data-wrapper">
                 <h2 class="heading">About Me</h2>
                 <h5 class="optional-desc slant">Developer | Creative</h5>
-                <p class="abt-summary">I am a tech lover. I have interest in many fields of Tech which include, Programming, Web developing, Penitration Testing. I like to see myself contributing to amazing prouducts or inventions in the future. Graphic/ UI/ Ux design is one
-                    of my other skills which makes me creative.</p>
+                <p class="abt-summary">I am a technology enthusiast, designer, coder and nature lover. I give more importance to be creative and unique. I have strong interest towards the field of cybersecurity. I like to know how different tech works, knowing how things work
+                    will let me know how it can be breaked, knowing how to break will let me know how to prevent the breach. In short, Iam a person who like to contsantly upgrade myself.</p>
                 <span class="social flex">
                     <a href=""> <i class="fab fa-linkedin-in"></i></a>
                     <a href=""><i class="fab fa-github"></i></a>
@@ -140,7 +140,18 @@
 
     <script src="./js/portfolio.js"></script>
     <script src="./js/app.js"></script>
-    <div style="display: none;">Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+    <!-- to notify users if thier browser is outdated -->
+    <script>
+        (function(u) {
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = u;
+            var b = document.getElementsByTagName('script')[0];
+            b.parentNode.insertBefore(s, b);
+        })('//updatemybrowser.org/umb.js');
+    </script>
+    <!--<div style="display: none;">Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
 
 </body>
 

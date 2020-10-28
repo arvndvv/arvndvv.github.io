@@ -1,28 +1,16 @@
 .skills {
-    padding: 8em 10em;
+    padding: 5% 10%;
     min-height: 100vh;
     overflow: hidden;
     position: relative;
 }
 
-.skills .heading {
-    margin-left: -2.5em;
-}
-
-.skills .heading::before {
-    bottom: -2px;
-}
-
-.skills .skill-list {
-    margin: 5em 0em;
-}
-
 .skills:before {
     content: "SKILLS";
     position: absolute;
-    font-size: 10em;
+    font-size: 12em;
     left: 0;
-    top: 10%;
+    top: 5%;
     z-index: -2;
     color: var(--dark-grey);
     opacity: 0.1;
@@ -41,10 +29,23 @@
     font-weight: 900;
 }
 
+.skills .heading {
+    margin-left: -1.5em;
+    margin-top: 1em;
+}
+
+.skills .heading::before {
+    bottom: -2px;
+}
+
+.skills .skill-list {
+    margin: 5em 0em;
+}
+
 .skills .skill-wrapper {
-    width: 8em;
-    height: 8em;
-    margin: 1em;
+    width: 9em;
+    height: 9em;
+    margin: 2em;
     position: relative;
     border-radius: 50%;
     background: var(--light);
@@ -54,8 +55,8 @@
 .skill-wrapper::before {
     content: "";
     position: absolute;
-    width: 10em;
-    height: 8em;
+    width: 11em;
+    height: 9em;
     z-index: -1;
     border-radius: 50%;
     left: -10px;
@@ -68,8 +69,8 @@
 .skill-wrapper::after {
     content: "";
     position: absolute;
-    width: 10em;
-    height: 8em;
+    width: 11em;
+    height: 9em;
     z-index: -1;
     border-radius: 50%;
     left: -10px;
@@ -83,7 +84,7 @@
 .skill-wrapper i::before {
     width: 100%;
     content: attr(data-name);
-    font-size: 0.7em;
+    font-size: 0.85em;
     font-weight: 600;
     position: absolute;
     font-style: normal;
