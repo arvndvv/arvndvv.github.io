@@ -5,6 +5,14 @@
     position: relative;
 }
 
+.skills .heading {
+    margin-left: -2.5em;
+}
+
+.skills .heading::before {
+    bottom: -2px;
+}
+
 .skills .skill-list {
     margin: 5em 0em;
 }

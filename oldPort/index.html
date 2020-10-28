@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="fav.png" />
+    <title>ARVNDVV</title>
+    <link rel="stylesheet" href="gallery.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Lobster+Two|Mitr|Monoton|Pacifico|Sen&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body class="hid">
+    <div id="loader">
+      <div class="lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <span id="container">
+      <main>
+        <span class="about">
+          <h1><st>A</st>ravind V V</h1>
+          <h4>Web Dev. | Designer</h4>
+          <span class="fa fa-phone"><h5>8281986862</h5></span>
+
+          <span class="fa fa-envelope"><h5>arvndvv@gmail.com</h5></span>
+
+          <span class="fa fa-linkedin"><h5>aravindvv</h5></span>
+        </span>
+        <div class="menu">
+          <div class="men aboutme" onclick="aboutopen()">
+            <span class="fa m fa-address-card"></span><e>About</e>
+          </div>
+          <div class="men gallery" onclick="galleryopen()">
+            <span class="fa m fa-image"></span><e>gallery</e>
+          </div>
+          <div class="men projects">
+            <a href="https://github.com/arvndvv"
+              ><span class="fa m fa-code"></span><e>projects</e></a
+            >
+          </div>
+          <div class="men writing" onclick="writeopen()">
+            <span class="fa m  fa-pencil-square-o"></span><e>writings</e>
+          </div>
+        </div>
+        <div class="dp" onclick="bgm()"></div>
+        <audio id="bgm">
+          <source src="bgm.mp3" type="audio/mpeg" />
+        </audio>
+      </main>
+
+      <detail>
+        <toleft>
+          <h1>Education</h1>
+          <h4>Btech,KTU</h4>
+          <h5>2016-2020</h5>
+          <h4>Higher Secondary,CBSE</h4>
+          <h5>2014-2016</h5>
+          <h4>High School,CBSE</h4>
+          <h5>2014</h5>
+
+          <h1>Key Skills</h1>
+          <h4 class="sk">UI UX Design</h4>
+          <span class="progress ui "></span>
+
+          <h4 class="sk">Graphic Design</h4>
+          <span class="progress graphic"></span>
+          <h4 class="sk">Python</h4>
+          <span class="progress python"></span>
+          <h4 class="sk">C++</h4>
+          <span class="progress cpp"></span>
+          <h4 class="sk">Full Stack</h4>
+          <span class="progress fs"></span>
+
+          <h4 class="sk">Pen. Testing</h4>
+          <span class="progress ptest"></span>
+        </toleft>
+        <toright>
+          <h1>Projects</h1>
+          <h4>Elixir-Web App</h4>
+          <p>
+            A web app ,social media like platform where people can signin and
+            hire workers for various household services.
+          </p>
+          <h4>Accident Alert System</h4>
+          <p>
+            Installed in vehicles with various sensors, detects if accident
+            occurs and will send alert msg to the predefined numbers.
+          </p>
+
+          <h1>Experience</h1>
+          <h4>Organiser</h4>
+          <h5>School of Ai, 2019-present</h5>
+          <h4>Coordinator</h4>
+          <h5>Hyperlink Club, LMCST, 2019-present</h5>
+
+          <h1>Hobbies</h1>
+          <hobby>
+            <div class="hobby write "><i class="fa fa-pencil"></i></div>
+
+            <div class="hobby read  "><i class=" fa fa-book "></i></div>
+
+            <div class="hobby movies "><i class=" fa  fa-film"></i></div>
+            <div class="hobby coding "><i class="fa   fa-laptop "></i></div>
+          </hobby>
+        </toright>
+      </detail>
+    </span>
+    <span id="writing" class=""
+      ><close onclick="writeclose()">X</close>
+      <a href="http://mont3cris7o.blogspot.com/">BLOG</a>
+      <a href="https://www.inkitt.com/aravindvv">STORY</a>
+    </span>
+    <span id="about" class="">
+      <close onclick="aboutclose()">X</close>
+      <h1>About</h1>
+      <p>
+        I am Aravind v v. I am pursuing computer science and engineering under
+        Kerala technological university. Creative minds can cast magic to craft
+        anything into treasure. I am in following the path to be a creative
+        mind. I have experience in working on Illustrator, Photoshop, XD. I have
+        created posters, banners, logos for various events and worked on
+        designing college magazine.
+        <span>+ This portfolio is fully coded by me.</span>
+        <span>+ I am interested in working with python.</span>
+        <span
+          >+ I am learning Penetration Testing and have a decent skill in web
+          application penetration testing.</span
+        >
+      </p>
+    </span>
+    <span id="gallery">
+      <close onclick="galleryclose()">X</close>
+      <div class="callbacks_container">
+        <ul class="rslides" id="slider4">
+          <li>
+            <img src="img/1.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/2.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/3.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/4.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/5.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/6.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/7.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/8.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/9.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/10.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/11.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/12.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/13.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/14.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/15.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/16.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/17.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/18.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/19.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/20.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/21.jpg" alt="" />
+          </li>
+          <li>
+            <img src="img/22.jpg" alt="" />
+          </li>
+        </ul>
+      </div>
+    </span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="responsiveslides.js"></script>
+    <script>
+      // You can also use "$(window).load(function() {"
+      $(function() {
+        $("#slider4").responsiveSlides({
+          auto: false,
+          pager: false,
+          nav: true,
+          speed: 500,
+          namespace: "callbacks",
+          before: function() {
+            $(".events").append("<li>before event fired.</li>");
+          },
+          after: function() {
+            $(".events").append("<li>after event fired.</li>");
+          }
+        });
+      });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -6,16 +6,31 @@
 
  :root {
     --dark: #151419;
+    --dark-medium: #272727;
+    --dark-hard: #1f1f1f;
     --shadeOne: #ea234c;
     --shadeOneLight: #ff4b70;
     --shadeTwo: #c12f31;
     --shadeThree: #10e275;
+    --light-green: #57b6ae;
+    --blueOne: #078cbf;
+    --blueTwo: #46ccff;
     --yellow: #ecc410;
     --flame: #f6b830;
     --light: #fbfdfc;
     --light-grey: #f7f7f7;
     --medium-grey: #bfbfbf;
     --dark-grey: #333;
+}
+
+body {
+    zoom: 113%;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+    background: var(--shadeOne);
+    display: none;
 }
 
 html {
@@ -28,6 +43,7 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    outline: none;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
 }
@@ -42,6 +58,7 @@ html {
     font-size: 2em;
     color: var(--shadeOne);
     position: relative;
+    display: inline-block;
     margin-bottom: 5px;
 }
 
@@ -51,7 +68,7 @@ html {
     height: 3px;
     bottom: 0;
     left: -10px;
-    background: var(--shadeOne);
+    background: var(--dark-hard);
     position: absolute;
 }
 
@@ -100,7 +117,7 @@ html {
     text-decoration: none;
     pointer-events: visible;
     color: var(--light);
-    font-size: 0.65em;
+    font-size: 0.75em;
     font-weight: 600;
     text-transform: uppercase;
     transition: 0.4s color cubic-bezier(0.4, 0, 1, 1);
@@ -123,7 +140,7 @@ html {
 
 .nav .brand {
     margin-left: 5vw;
-    font-size: 1.2em;
+    font-size: 1.3em;
     position: relative;
 }
 
