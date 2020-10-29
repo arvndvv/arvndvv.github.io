@@ -47,28 +47,40 @@ document.addEventListener("scroll", function() {
                     if (scrollPos == offset(home).top) {
                         //? scroll reached top of home
                         nav.style.background = "transparent";
+                        //? hides Slideup
+                        document.querySelector("#slideup").style.opacity = "0";
+                        document.querySelector("#slideup").style.display = "none";
+
                     }
 
                 } else {
                     //? scroll reached about
                     clearClass('.nav ul li');
                     navItems[1].classList.add('active')
+                    document.querySelector("#slideup").style.opacity = "1";
+                    document.querySelector("#slideup").style.display = "inline";
                 }
             } else {
                 //? scroll reached skills
                 clearClass('.nav ul li');
                 navItems[2].classList.add('active')
+                document.querySelector("#slideup").style.opacity = "1";
+                document.querySelector("#slideup").style.display = "inline";
             }
 
         } else {
             //? scroll reached portfolio
             clearClass('.nav ul li');
             navItems[3].classList.add('active')
+            document.querySelector("#slideup").style.opacity = "1";
+            document.querySelector("#slideup").style.display = "inline";
         }
     } else {
         //? scroll reached contact
         clearClass('.nav ul li');
         navItems[4].classList.add('active')
+        document.querySelector("#slideup").style.opacity = "1";
+        document.querySelector("#slideup").style.display = "inline";
     }
 
     // cRemarks(prevScrollPos)

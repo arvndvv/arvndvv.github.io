@@ -5,7 +5,7 @@
 /*--*/
 
  :root {
-    --dark: #151419;
+    --dark: #1e1e1e;
     --dark-medium: #272727;
     --dark-hard: #1f1f1f;
     --shadeOne: #ea234c;
@@ -36,6 +36,10 @@ body::-webkit-scrollbar {
     width: 1em;
     background: var(--shadeOne);
     display: none;
+}
+
+body {
+    scrollbar-color: var(--dark-medium) var(--shadeOne);
 }
 
 html {
@@ -166,4 +170,18 @@ html {
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+a .slideup {
+    position: fixed;
+    right: 0.5em;
+    font-size: 2.5em;
+    bottom: 1em;
+    color: #eb5942;
+    z-index: 1000;
+    cursor: pointer;
+    opacity: 0;
+    display: none;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0px 2px 2px var(--dark-grey));
 }

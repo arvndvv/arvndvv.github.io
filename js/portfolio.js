@@ -45,6 +45,36 @@ const projects = [{
             view: "img/projects/bot.jpg",
             summary: "Python bot which logs into our account and likes upto 45 posts having user specified hashtag.",
             url: "https://github.com/arvndvv/InstagramBot.git"
+        }, {
+            id: 6,
+            title: "MAC Address Spoofer",
+            stack: "Python",
+            view: "img/projects/macspoofer.png",
+            summary: "A tool to change MAC address of your machine,works for Linux Machines only.",
+            url: "https://github.com/arvndvv/MAC_Address_Spoofer.git"
+        }, {
+            id: 7,
+            title: "IP Tracker",
+            stack: "Python",
+            view: "img/projects/iptracker.png",
+            summary: "simple python snippet to get details about a domain or ip.",
+            url: "https://github.com/arvndvv/IP-Tracker.git"
+        },
+        {
+            id: 8,
+            title: "ConsoleStyles",
+            stack: "JavaScript",
+            view: "img/projects/cs.png",
+            summary: "Js framework to make console logging more beautiful.",
+            url: "https://github.com/arvndvv/ConsoleStyles.git"
+        },
+        {
+            id: 9,
+            title: "My Portfolio Website",
+            stack: "HTML | CSS | JavaScript",
+            view: "img/projects/bot.jpg",
+            summary: "There is a lot I have learned between the timespan of my previous portfolio and the current one",
+            url: "#"
         }
 
     ]
@@ -53,12 +83,12 @@ const projects = [{
 //? Design Images ?//
 let dir = "img/gallery/";
 let images = [];
-let imgCount = 21;
-for (let i = 1; i < imgCount; i++) {
+let imgCount = 24;
+for (let i = 1; i <= imgCount; i++) {
     let path = dir + i + '.jpg';
     images.push(path);
 }
-//cSuccess(images)
+cSuccess(images)
 
 
 let descCard = document.querySelector("#proj-desc");
@@ -141,14 +171,18 @@ const togglePort = x => {
             window.clearTimeout(id); // will do nothing if no timeout with id is present
         }
 
-        //! load images
+        //! load images (make sure to have img count multiple of 4)
         let imgIndex = 0;
         for (i = 0; i < 4; i++) {
             let clm = document.createElement('div');
             clm.classList.add("column");
             for (let j = 0; j < images.length / 4; j++) {
                 let img = document.createElement('img');
+                //cError(i)
+                //cSuccess(j)
                 img.src = images[imgIndex];
+                // cRemarks(imgIndex)
+                // cWarn(images[imgIndex])
                 imgIndex++;
                 clm.appendChild(img)
             }
