@@ -1,6 +1,7 @@
 .portfolio {
     padding: 0em;
     height: 100vh;
+    overflow: hidden;
     position: relative;
     width: 100vw;
     background: var(--shadeOne);
@@ -93,42 +94,6 @@
     transform: rotate(180deg) scale(1.3);
 }
 
-@keyframes showCard {
-    0% {
-        transform: translate(-50%, -50%);
-        z-index: 0;
-    }
-    50% {
-        transform: translate(-115%, -50%);
-        z-index: 0;
-    }
-    60% {
-        z-index: 2;
-    }
-    100% {
-        transform: translate(-50%, -50%);
-        z-index: 2;
-    }
-}
-
-@keyframes hideCard {
-    0% {
-        transform: translate(-50%, -50%);
-        z-index: 2;
-    }
-    50% {
-        transform: translate(-115%, -50%);
-        z-index: 2;
-    }
-    60% {
-        z-index: 0;
-    }
-    100% {
-        transform: translate(-50%, -50%);
-        z-index: 0;
-    }
-}
-
 .desc {
     width: 65%;
     box-shadow: -1px 0px 10px var(--dark-grey);
@@ -204,6 +169,11 @@
 .desc-container .checkit a:hover {
     color: var(--blueTwo);
     border: 1px solid var(--blueTwo);
+    background: var(--blueOne);
+}
+
+.hideDesc {
+    right: -100%;
 }
 
 .proj-control {
@@ -228,17 +198,53 @@
 
 .view {
     display: inline-flex;
-    width: 50%;
+    width: 60%;
     top: 50%;
     overflow: hidden;
     transform: translate(-50%, -50%);
-    right: 0%;
+    right: -15%;
     border-radius: 0px;
     box-shadow: 0 0 10px var(--dark-medium);
     height: 80%;
     transition: all 0.3s ease;
     position: absolute;
     background: var( --light);
+}
+
+@keyframes showCard {
+    0% {
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+    50% {
+        transform: translate(-125%, -50%);
+        z-index: 0;
+    }
+    60% {
+        z-index: 2;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+}
+
+@keyframes hideCard {
+    0% {
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    50% {
+        transform: translate(-125%, -50%);
+        z-index: 2;
+    }
+    60% {
+        z-index: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
 }
 
 .project {
@@ -266,6 +272,8 @@
 
 .design {
     overflow-y: scroll;
+    transform: translate(-20%, -50%);
+    width: 65%;
 }
 
 .design::-webkit-scrollbar {

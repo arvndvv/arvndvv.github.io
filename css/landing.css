@@ -1,7 +1,7 @@
 .landing {
     padding: calc(5vw + 1.5em);
     background: var(--dark);
-    min-height: 100vh;
+    height: 100vh;
     color: var(--light);
     position: relative;
     display: flex;
@@ -50,7 +50,6 @@
 
 .landing-data {
     margin-top: 8.5%;
-    z-index: 2;
     margin-left: 1%;
     padding: 25px;
     height: fit-content;
@@ -60,7 +59,7 @@
 
 .landing-img {
     margin-top: 20%;
-    margin-left: 20%;
+    margin-left: 15%;
     width: 40%;
     background-position: center center;
     background-size: 90%;
@@ -90,7 +89,7 @@
 }
 
 .my-name {
-    font-size: 3.4em;
+    font-size: 4em;
 }
 
 .my-name::before {
@@ -99,9 +98,10 @@
     color: var(--dark);
     width: fit-content;
     border-radius: 5px;
+    font-weight: 500;
     font-size: 16px;
     padding: 5px 10px 5px 10px;
-    top: -2px;
+    top: 0px;
     overflow: hidden;
     background: var(--flame);
 }
@@ -109,8 +109,8 @@
 .my-name::after {
     content: "";
     position: absolute;
-    top: 26px;
-    left: 20%;
+    top: 28px;
+    left: 17%;
     width: 0px;
     height: 0px;
     border-top: 10px solid var(--flame);
@@ -119,17 +119,15 @@
 
 .my-desig {
     font-weight: 400;
-    font-size: 1.125em;
+    font-size: 1.5em;
 }
 
 .btn-landing {
-    border: none;
-    padding: 6px 17px 6px 17px;
+    padding: 10px 2em;
     font-weight: 600;
     border-radius: 5px;
-    font-size: 1.17em;
-    margin: 10px;
-    margin-top: 3em;
+    font-size: 1.2em;
+    margin: 4em 10px;
     transform: translateX(-10px);
     color: var(--light);
     background: transparent;

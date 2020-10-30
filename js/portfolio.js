@@ -88,7 +88,7 @@ for (let i = 1; i <= imgCount; i++) {
     let path = dir + i + '.jpg';
     images.push(path);
 }
-cSuccess(images)
+//cSuccess(images)
 
 
 let descCard = document.querySelector("#proj-desc");
@@ -156,15 +156,14 @@ const togglePort = x => {
     document.getElementById(x).classList.add('active');
     //? if designs is selected
     if (x === 'designs') {
-        desc.style.right = "-100%";
+        desc.classList.add("hideDesc");
 
         document.querySelector("#open_card").style.opacity = 0;
         document.querySelector("#open_card").style.visibility = "hidden";
         document.querySelector("#open_card").classList.remove("rotate");
         clearClass('#port-view');
         view.classList.add('view', 'design');
-        view.style.width = "65%"
-        view.style.transform = "translate(-20%, -50%)"
+
         var id = window.setTimeout(function() {}, 0);
 
         while (id--) {
@@ -197,11 +196,9 @@ const togglePort = x => {
     //? if projects is selected
     if (x === 'projects') {
         document.querySelector("#gallery").innerHTML = '';
-        desc.style.right = "-5%";
+        desc.classList.remove("hideDesc");
         view.classList.remove('design');
         view.classList.add('project');
-        view.style.width = "50%";
-        view.style.transform = "translate(-50%, -50%)";
         document.querySelector("#open_card").style.visibility = "visible";
         document.querySelector("#open_card").style.opacity = 1;
         setTimeout(changeCard, 10000);

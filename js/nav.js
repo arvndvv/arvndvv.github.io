@@ -143,3 +143,10 @@ function handleMouseMove(e) {
         }
     }
 }
+
+//* show menu in mobile devices
+
+const showMenu = () => {
+    document.querySelector('.nav ul').classList.toggle('menu-show');
+    document.querySelector('.nav .hamburger').classList.toggle('ham-active');
+}

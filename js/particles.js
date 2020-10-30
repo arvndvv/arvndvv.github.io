@@ -1,3 +1,10 @@
+//! to calculate the remaining height after occupied by abt data
+let abtheight = document.querySelector(".about-img-wrapper").offsetHeight;
+let screenHeight = window.innerHeight;
+//cError(abtheight);
+let particleHeight = screenHeight - abtheight;
+
+
 // particle.min.js hosted on GitHub
 // Scroll down for initialisation code
 //?particle code is taken from https://codepen.io/JulianLaval/pen/KpLXOO
@@ -94,8 +101,9 @@
             this.i.appendChild(this.canvas),
                 (this.g = this.canvas.getContext("2d")),
                 (this.canvas.width = this.i.size.width),
-                (this.canvas.height = this.i.size.height),
+                (this.canvas.height = particleHeight),
                 this.l(this.i, { position: "relative" }),
+
                 this.l(this.canvas, { "z-index": "20", position: "relative" }),
                 window.addEventListener(
                     "resize",

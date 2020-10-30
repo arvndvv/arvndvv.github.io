@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/skills.css">
     <link rel="stylesheet" href="./css/portfolio.css">
     <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 
 </head>
 
@@ -28,8 +29,9 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-ctc">Contact</a></li>
             </ul>
+            <i class="fas fa-hamburger hamburger" id="hamburger" onclick="showMenu()"></i>
         </nav>
 
         <section id="home" class="landing">
@@ -39,7 +41,7 @@
                 <a href="#portfolio"><button class="btn-landing">Portfolio</button></a>
                 <a href="#contact"> <button class="btn-landing">Contact</button></a>
             </div>
-            <div class="landing-img"><img src="./img/landing.png" alt=""><code>et voilà! welcome to my website.</code></div>
+            <div class="landing-img"><img src="./img/landing.png" alt=""><code>Et Voilà! Welcome Explorer</code></div>
             <svg class="landing-wave1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path  fill-opacity="1" d="M0,64L30,96C60,128,120,192,180,186.7C240,181,300,107,360,85.3C420,64,480,96,540,133.3C600,171,660,213,720,229.3C780,245,840,235,900,197.3C960,160,1020,96,1080,106.7C1140,117,1200,203,1260,229.3C1320,256,1380,224,1410,208L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
             <svg class="landing-wave2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path  fill-opacity="1" d="M0,64L30,96C60,128,120,192,180,186.7C240,181,300,107,360,85.3C420,64,480,96,540,133.3C600,171,660,213,720,229.3C780,245,840,235,900,197.3C960,160,1020,96,1080,106.7C1140,117,1200,203,1260,229.3C1320,256,1380,224,1410,208L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
 
@@ -137,17 +139,17 @@
                 </div>
                 <div class="contact-form">
                     <form method="post" id="sheetdb-form" action="https://sheetdb.io/api/v1/1n6zjkjk92rz1">
-                        <input type="text" class="input" placeholder="Name" name="data[Name]">
-                        <input type="email" class="input" placeholder="E-mail" name="data[Email]">
-                        <textarea placeholder="Message..." name="data[Message]"></textarea>
+                        <input type="text" class="input check" placeholder="Name" name="data[Name]" required>
+                        <input type="email" class="input check" placeholder="E-mail" name="data[Email]" required>
+                        <textarea placeholder="Message..." class="check" name="data[Message]" required></textarea>
                         <input type="submit" value="Send">
                     </form>
 
                 </div>
             </div>
             <footer>
-                <p>Designed and Developed by <b>Aravind V V</b></p>
-                <p>Copyright &copy; 2020</p>
+                <p>Copyright &copy; 2020 | <b>Designed and Developed by </b>Aravind V V</p>
+
             </footer>
         </section>
         <a href="#home"><i class="fas fa-arrow-circle-up slideup" id="slideup"></i></a>
@@ -167,6 +169,7 @@
     <script src="./js/skills.js"></script>
 
     <script src="./js/portfolio.js"></script>
+
     <script src="./js/contact.js"></script>
 
     <!-- to notify users if thier browser is outdated -->
