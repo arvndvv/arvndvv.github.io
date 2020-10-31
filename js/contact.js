@@ -36,14 +36,16 @@ form.addEventListener("submit", e => {
                 'Your Message is Delivered to Aravind!',
                 'success'
             );
+
             form.reset();
         });
     } else {
         let errIndex = getRandomInt(errMsgs.length);
-        Swal.fire({
-            icon: 'error',
-            title: errMsgs[errIndex],
-            text: 'No field should be empty!'
-        })
+
+        Swal.fire(
+            errMsgs[errIndex],
+            'No field should be empty!',
+            'error'
+        );
     }
 });

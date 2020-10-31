@@ -1,13 +1,4 @@
-//! to clear console !//
-if (typeof console._commandLineAPI !== 'undefined') {
-    console.API = console._commandLineAPI;
-} else if (typeof console._inspectorCommandLineAPI !== 'undefined') {
-    console.API = console._inspectorCommandLineAPI;
-} else if (typeof console.clear !== 'undefined') {
-    console.API = console;
-}
-console.API.clear()
-    //* project object*//
+//* project object*//
 const projects = [{
             id: 1,
             title: "Elixir-Web App",
