@@ -63,7 +63,7 @@ const projects = [{
             id: 9,
             title: "My Portfolio Website",
             stack: "HTML | CSS | JavaScript",
-            view: "img/projects/bot.jpg",
+            view: "img/projects/cport.png",
             summary: "There is a lot I have learned between the timespan of my previous portfolio and the current one",
             url: "#"
         }
