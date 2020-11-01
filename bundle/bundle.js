@@ -401,22 +401,22 @@ const projects = [{
             title: "Elixir-Web App",
             stack: "HTML | CSS | Bootstrap | JS | JQuery | Ajax | PHP | MySqli",
             view: "img/projects/elixir.png",
-            summary: "Elixir is a LAMP Stack web application where people who can provide house-hold services can register and get hired by people who needs service.",
+            summary: "Elixir is a LAMP Stack web application where people can hire workers for various services.",
             url: "https://proelixir.in"
         },
         {
             id: 2,
-            title: "Previous Portfolio",
+            title: "Online Resume",
             stack: "HTML | CSS | JS |",
             view: "img/projects/oldPort.png",
-            summary: "Designed UI like that of a resume.",
-            url: "oldPort/"
+            summary: "Designed and developed UI like that of a resume.",
+            url: "OnlineResume/"
         }, {
             id: 3,
             title: "PhotoEditor",
             stack: "React JS | CSS",
             view: "img/projects/pe.png",
-            summary: "Webpage with two images where user can try out giving different effects using sliders.",
+            summary: "Website with two images where user can try out giving different effects using sliders.",
             url: "https://reactphotoeditor.netlify.app/"
 
         }, {
