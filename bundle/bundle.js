@@ -2823,7 +2823,7 @@ const projects = [{
             stack: "HTML | CSS | JS |",
             view: "img/projects/oldPort.png",
             summary: "Designed and developed UI like that of a resume.",
-            url: "OnlineResume/"
+            url: "https://arvndvv.github.io/Online-Resume/"
         }, {
             id: 3,
             title: "PhotoEditor",
