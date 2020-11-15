@@ -1,3 +1,84 @@
+/*Loader style*/
+
+.loader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: var(--dark);
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.no-loader {
+    display: none;
+}
+
+.no-scroll {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden!important;
+}
+
+.load-element {
+    width: 20%;
+    height: 30%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+}
+
+.load-element span {
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: red;
+    top: 50%;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+}
+
+.load-element span:nth-child(1) {
+    margin: 0 -1.5em;
+    animation: loading 2s ease-in-out infinite 0.1s alternate;
+}
+
+.load-element span:nth-child(2) {
+    margin: 0 0em;
+    animation: loading 2s ease-in-out infinite 0.3s alternate;
+}
+
+.load-element span:nth-child(3) {
+    margin: 0 1.5em;
+    animation: loading 2s ease-in-out infinite 0.5s alternate;
+}
+
+@keyframes loading {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        filter: hue-rotate(0);
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(2.5);
+        filter: hue-rotate(-80deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        filter: hue-rotate(0deg);
+    }
+}
+
+
+/*Loader style ends*/
+
+
+/*utilities style*/
+
+
 /*font Roboto*/
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -24,14 +105,6 @@
     --medium-grey: #bfbfbf;
     --dark-grey: #333;
 }
-
-
-/*body {
-    zoom: 113%;
-    -ms-zoom: 113%;
-    -moz-transform: scale(113%);
-    -moz-transform-origin: center center;
-}*/
 
 body::-webkit-scrollbar {
     width: 1em;
@@ -109,7 +182,7 @@ html {
 }
 
 .desktop-close {
-    transform: translateY(-4em);
+    transform: translateY(-10em);
 }
 
 .nav ul {
@@ -134,7 +207,7 @@ html {
     position: relative;
     font-weight: 600;
     text-transform: uppercase;
-    transition: 0.2s color cubic-bezier(0.4, 0, 1, 1);
+    transition: 0.3s color cubic-bezier(0.4, 0, 1, 1);
 }
 
 .nav ul li:hover a,
@@ -188,7 +261,7 @@ a .slideup {
     cursor: pointer;
     opacity: 0;
     display: none;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     filter: drop-shadow(0px 2px 2px var(--dark-grey));
 }
 
@@ -204,31 +277,6 @@ a .slideup {
     animation: spideysense 2s cubic-bezier(0.65, 0.05, 0.36, 1) infinite 1s;
 }
 
-
-/*
-@keyframes spideysense {
-    from {
-        transform: scale(1.4) rotate(0);
-    }
-    15% {
-        transform: scale(1) rotate(0deg);
-        filter: blur(0px);
-    }
-    35% {
-        transform: scale(1) rotate(25deg);
-        filter: blur(0px);
-    }
-    50% {
-        transform: scale(1) rotate(-25deg);
-    }
-    65% {
-        transform: scale(1) rotate(0deg);
-    }
-    to {
-        transform: scale(1.4) rotate(0deg);
-    }
-}*/
-
 @keyframes spideysense {
     from {
         transform: scale(1.4) rotate(0deg);
@@ -240,6 +288,12 @@ a .slideup {
         transform: scale(1.4) rotate(-90deg);
     }
 }
+
+
+/* utilities ends*/
+
+
+/* landing.css */
 
 .landing {
     padding: calc(5vw + 1.5em);
@@ -376,7 +430,7 @@ a .slideup {
     background: transparent;
     border: 4px solid var(--light);
     cursor: pointer;
-    transition: all 0.2s ease-in-out 0.1s;
+    transition: all 0.3s ease-in-out 0.1s;
 }
 
 .btn-landing:hover {
@@ -407,6 +461,12 @@ a .slideup {
         transform: translate(30%, -101%) rotate(0deg);
     }
 }
+
+
+/*landing ends*/
+
+
+/*about.css */
 
 .about {
     min-height: 60vh;
@@ -496,9 +556,14 @@ a .slideup {
 }
 
 .particles {
-    /*height: 40vh;*/
     grid-area: 2/1/3/3;
 }
+
+
+/*about ends*/
+
+
+/*skills */
 
 .skills {
     padding: 5% 10%;
@@ -565,7 +630,7 @@ a .slideup {
     top: 0;
     background: var(--shadeOne);
     transform: scale(1);
-    transition: all 0.5s ease;
+    transition: all 0.6s ease;
 }
 
 .skill-wrapper::after {
@@ -579,7 +644,7 @@ a .slideup {
     top: 0;
     background: var(--shadeTwo);
     transform: scale(1) rotate(45deg);
-    transition: all 0.5s ease;
+    transition: all 0.6s ease;
     box-shadow: 5px 5px 10px var(--medium-grey);
 }
 
@@ -623,6 +688,12 @@ a .slideup {
     transform: translate(-50%, -50%);
 }
 
+
+/*skills ends*/
+
+
+/*portfolio*/
+
 .portfolio {
     padding: 0em;
     height: 100vh;
@@ -655,7 +726,7 @@ a .slideup {
 .portfolio ul li {
     margin: 15px 0;
     color: var(--dark-hard);
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
     cursor: pointer;
 }
 
@@ -726,7 +797,7 @@ a .slideup {
     float: right;
     top: 0;
     position: absolute;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     overflow: hidden;
     right: -5%;
     /* transform: translate(-5em, 5em);*/
@@ -927,6 +998,12 @@ a .slideup {
     width: 100%;
 }
 
+
+/*portfolio ends*/
+
+
+/*contact css */
+
 .contact {
     min-height: 100vh;
     padding: 5em;
@@ -1092,6 +1169,12 @@ footer p {
 footer p b {
     font-weight: 700;
 }
+
+
+/*contact ends*/
+
+
+/*responsive*/
 
 @media only screen and (max-width:1450px) {
     .landing-img {
@@ -1476,7 +1559,7 @@ footer p b {
         top: -50em;
         line-height: 2.5em;
         padding: 1em 0;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
     }
     .nav ul li {
         padding: 0 8px;
@@ -1493,7 +1576,7 @@ footer p b {
         color: var(--light-grey);
         font-size: 1.5em;
         transform: translateX(25px);
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
     }
     .hamburger:hover {
         transform: translateX(25px) rotate(360deg);
@@ -1919,84 +2002,5 @@ footer p b {
     }
 }
 
-.loader {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background: var(--dark);
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
 
-.no-loader {
-    display: none;
-}
-
-.no-scroll {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden!important;
-}
-
-.load-element {
-    width: 20%;
-    height: 30%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: transparent;
-}
-
-.load-element span {
-    width: 10px;
-    height: 10px;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: red;
-    top: 50%;
-    transition: all 0.3s ease;
-    border-radius: 50%;
-}
-
-.load-element span:nth-child(1) {
-    margin: 0 -2.5em;
-    animation: loading 1s ease-in-out infinite 1s alternate;
-}
-
-.load-element span:nth-child(2) {
-    margin: 0 -1em;
-    animation: loading 1s ease-in-out infinite 2.7s alternate;
-}
-
-.load-element span:nth-child(3) {
-    margin: 0 0.5em;
-    animation: loading 1s ease-in-out infinite 4.5s alternate;
-}
-
-.load-element span:nth-child(4) {
-    margin: 0 2em;
-    animation: loading 1s ease-in-out infinite 6.3s alternate;
-}
-
-.load-element span:nth-child(5) {
-    margin: 0 3.5em;
-    animation: loading 1s ease-in-out infinite 8.1s alternate;
-}
-
-@keyframes loading {
-    from {
-        transform: translate(-50%, -50%) scale(1);
-        filter: hue-rotate(0);
-    }
-    70% {
-        transform: translate(-290%, -250%) scale(2.5);
-        filter: hue-rotate(-120deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(0);
-        filter: hue-rotate(0deg);
-    }
-}
+/* responsive ends*/

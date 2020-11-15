@@ -2411,6 +2411,51 @@
 //* sweetalert end
 
 
+//?skills
+let skillitems = [{
+    img: 'img/skills/html-5.svg',
+    name: 'HTML5'
+}, {
+    img: 'img/skills/css.svg',
+    name: 'CSS3'
+}, {
+    img: 'img/skills/js.png',
+    name: 'JS'
+}, {
+    img: 'img/skills/react.svg',
+    name: 'ReactJs'
+}, {
+    img: 'img/skills/bootstrap.svg',
+    name: 'Bootstrap'
+}, {
+    img: 'img/skills/php.svg',
+    name: 'PHP'
+}, {
+    img: 'img/skills/sql.svg',
+    name: 'SQL'
+}, {
+    img: 'img/skills/python.svg',
+    name: 'Python'
+}, {
+    img: 'img/skills/c.webp',
+    name: 'C'
+}, {
+    img: 'img/skills/cpp.png',
+    name: 'C++'
+}, {
+    img: 'img/skills/photoshop.svg',
+    name: 'Photoshop'
+}, {
+    img: 'img/skills/illustrator.svg',
+    name: 'Illustrator'
+}, {
+    img: 'img/skills/xd.svg',
+    name: 'XD'
+}, {
+    img: 'img/skills/sass.png',
+    name: 'SASS'
+}];
+
 let body = document.querySelector('body');
 let loader = document.querySelector('#loader');
 
@@ -2462,6 +2507,7 @@ let skills = document.querySelector('#skills');
 let portfolio = document.querySelector('#portfolio');
 let contact = document.querySelector('#contact');
 //! scroll listener
+let skill_loaded = false;
 document.addEventListener("scroll", function() {
 
     nav.style.background = "var(--dark)";
@@ -2535,6 +2581,34 @@ document.addEventListener("scroll", function() {
     } else {
         prevScrollPos = scrollPos;
         nav.classList.remove("desktop-close");
+
+    }
+    //? load skills
+    let skillpos = document.querySelector("#skills").getBoundingClientRect().top / document.querySelector("#skills").getBoundingClientRect().height * 100;
+
+
+    if (skillpos <= 90 && !skill_loaded) {
+
+        skill_loaded = true;
+
+        let skillset = document.querySelector("#skillset");
+        skillset.innerHTML = "";
+        for (i = 0; i < skillitems.length; i++) {
+
+            let span = document.createElement('span');
+            span.classList.add("skill-wrapper");
+            let sub = document.createElement('i');
+            sub.classList.add('skill');
+            sub.style.background = "url('" + skillitems[i].img + "')";
+
+            sub.dataset.name = skillitems[i].name;
+            span.appendChild(sub);
+
+
+            skillset.appendChild(span);
+
+
+        }
 
     }
 
@@ -2802,12 +2876,7 @@ var options = {
     density: "high"
 };
 var particleCanvas = new ParticleNetwork(canvasDiv, options);
-document.querySelectorAll(".skill").forEach(skill => {
 
-    let url = skill.getAttribute('data-img');
-    //cError(url)
-    skill.style.background = "url('" + url + "')";
-});
 //* project object*//
 const projects = [{
             id: 1,
@@ -3069,7 +3138,7 @@ if (typeof console._commandLineAPI !== 'undefined') {
 } else if (typeof console.clear !== 'undefined') {
     console.API = console;
 }
-console.API.clear();
+//console.API.clear();
 //! to notify users if thier browser is outdated 
 (function(u) {
     var s = document.createElement('script');
