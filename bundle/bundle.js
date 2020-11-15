@@ -2587,7 +2587,7 @@ document.addEventListener("scroll", function() {
     let skillpos = document.querySelector("#skills").getBoundingClientRect().top / document.querySelector("#skills").getBoundingClientRect().height * 100;
 
 
-    if (skillpos <= 95 && !skill_loaded) {
+    if (skillpos <= 125 && !skill_loaded) {
 
         skill_loaded = true;
 
