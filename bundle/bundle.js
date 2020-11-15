@@ -2506,8 +2506,23 @@ let about = document.querySelector('#about');
 let skills = document.querySelector('#skills');
 let portfolio = document.querySelector('#portfolio');
 let contact = document.querySelector('#contact');
+
+//? load skills
+let skillset = document.querySelector("#skillset");
+skillset.innerHTML = "";
+for (i = 0; i < skillitems.length; i++) {
+    let span = document.createElement('span');
+    span.classList.add("skill-wrapper");
+    let sub = document.createElement('i');
+    sub.classList.add('skill');
+    sub.style.background = "url('" + skillitems[i].img + "')";
+    sub.dataset.name = skillitems[i].name;
+    span.appendChild(sub);
+    skillset.appendChild(span);
+}
+
+
 //! scroll listener
-let skill_loaded = false;
 document.addEventListener("scroll", function() {
 
     nav.style.background = "var(--dark)";
@@ -2581,34 +2596,6 @@ document.addEventListener("scroll", function() {
     } else {
         prevScrollPos = scrollPos;
         nav.classList.remove("desktop-close");
-
-    }
-    //? load skills
-    let skillpos = document.querySelector("#skills").getBoundingClientRect().top / document.querySelector("#skills").getBoundingClientRect().height * 100;
-
-
-    if (skillpos <= 170 && !skill_loaded) {
-
-        skill_loaded = true;
-
-        let skillset = document.querySelector("#skillset");
-        skillset.innerHTML = "";
-        for (i = 0; i < skillitems.length; i++) {
-
-            let span = document.createElement('span');
-            span.classList.add("skill-wrapper");
-            let sub = document.createElement('i');
-            sub.classList.add('skill');
-            sub.style.background = "url('" + skillitems[i].img + "')";
-
-            sub.dataset.name = skillitems[i].name;
-            span.appendChild(sub);
-
-
-            skillset.appendChild(span);
-
-
-        }
 
     }
 
