@@ -1377,7 +1377,7 @@ footer p b {
     }
     .contact {
         padding: 2em 0em;
-        background: var(--shadeOne);
+        background: var(--dark-hard);
     }
     .contact .heading {
         margin-left: 2.5em;
