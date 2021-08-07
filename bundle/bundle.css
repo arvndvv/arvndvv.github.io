@@ -1380,7 +1380,7 @@ footer p b {
         background: var(--dark-hard);
     }
     .contact .heading {
-        margin-left: 2.5em;
+        margin-left: 1.5em;
         color: var(--light-grey);
     }
     .contact .heading::after {
@@ -1559,6 +1559,7 @@ footer p b {
         top: -50em;
         line-height: 2.5em;
         padding: 1em 0;
+        height: 95vh;
         transition: all 0.5s ease;
     }
     .nav ul li {
