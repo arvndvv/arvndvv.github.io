@@ -1184,7 +1184,7 @@ footer p b {
 /* blog starts */
 
 .blog {
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 5% 10%;
     position: relative;
 }
