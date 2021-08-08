@@ -2511,6 +2511,7 @@ let about = document.querySelector('#about');
 let skills = document.querySelector('#skills');
 let portfolio = document.querySelector('#portfolio');
 let contact = document.querySelector('#contact');
+let blog = document.querySelector('#blog');
 
 //? load skills
 let skillset = document.querySelector("#skillset");
@@ -2541,47 +2542,56 @@ document.addEventListener("scroll", function() {
     //! auto marking active section
     let navItems = document.querySelectorAll('.nav ul li')
     if (scrollPos + 80 < offset(contact).top) {
-        if (scrollPos + 80 < offset(portfolio).top) {
-            if (scrollPos + 80 < offset(skills).top) {
-                if (scrollPos + 80 < offset(about).top) {
-                    //? scroll reached home
-                    clearClass('.nav ul li');
-                    navItems[0].classList.add('active')
-                    if (scrollPos == offset(home).top) {
-                        //? scroll reached top of home
-                        nav.style.background = "transparent";
-                        //? hides Slideup
-                        document.querySelector("#slideup").style.opacity = "0";
-                        document.querySelector("#slideup").style.display = "none";
+        if (scrollPos + 80 < offset(blog).top) {
+            if (scrollPos + 80 < offset(portfolio).top) {
+                if (scrollPos + 80 < offset(skills).top) {
+                    if (scrollPos + 80 < offset(about).top) {
+                        //? scroll reached home
+                        clearClass('.nav ul li');
+                        navItems[0].classList.add('active')
+                        if (scrollPos == offset(home).top) {
+                            //? scroll reached top of home
+                            nav.style.background = "transparent";
+                            //? hides Slideup
+                            document.querySelector("#slideup").style.opacity = "0";
+                            document.querySelector("#slideup").style.display = "none";
 
+                        }
+
+                    } else {
+                        //? scroll reached about
+                        clearClass('.nav ul li');
+                        navItems[1].classList.add('active')
+                        document.querySelector("#slideup").style.opacity = "1";
+                        document.querySelector("#slideup").style.display = "inline";
                     }
-
                 } else {
-                    //? scroll reached about
+                    //? scroll reached skills
                     clearClass('.nav ul li');
-                    navItems[1].classList.add('active')
+                    navItems[2].classList.add('active')
                     document.querySelector("#slideup").style.opacity = "1";
                     document.querySelector("#slideup").style.display = "inline";
                 }
+
             } else {
-                //? scroll reached skills
+                //? scroll reached portfolio
                 clearClass('.nav ul li');
-                navItems[2].classList.add('active')
+                navItems[3].classList.add('active')
                 document.querySelector("#slideup").style.opacity = "1";
                 document.querySelector("#slideup").style.display = "inline";
             }
-
         } else {
-            //? scroll reached portfolio
+            //? scroll reached blog
             clearClass('.nav ul li');
-            navItems[3].classList.add('active')
+            navItems[4].classList.add('active')
             document.querySelector("#slideup").style.opacity = "1";
             document.querySelector("#slideup").style.display = "inline";
+
         }
     } else {
         //? scroll reached contact
         clearClass('.nav ul li');
-        navItems[4].classList.add('active')
+        navItems[5].classList.add('active')
         document.querySelector("#slideup").style.opacity = "1";
         document.querySelector("#slideup").style.display = "inline";
     }
@@ -2964,7 +2974,7 @@ const projects = [{
             summary: "There is a lot I have learned between the timespan of my previous portfolio and the current one",
             url: "#"
         },
-       
+
 
     ]
     // cRemarks(projects.length);
@@ -3186,3 +3196,65 @@ if (mobileAndTabletCheck()) {
         title: 'Use desktop for better Experience!'
     })
 }
+
+//blog
+
+let blogs = [{
+        title: 'Isn’t it time to change our education system?',
+        url: 'https://medium.com/@arvndvv/isnt-it-time-to-change-our-education-system-8baa3daccf5e',
+        img: 'https://images.pexels.com/photos/4384147/pexels-photo-4384147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        tags: ['Education']
+    },
+    {
+        title: "How I Tried to become famous? Why we shouldn't try this method!",
+        url: 'https://medium.com/@arvndvv/how-i-tried-to-become-famous-why-we-shouldnt-try-this-method-918ed6d41f99',
+        img: 'https://images.pexels.com/photos/2432299/pexels-photo-2432299.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        tags: ['Life', 'Cyber']
+    },
+    {
+        title: 'How to add Custom Header (Banner) on your Terminal (Linux)',
+        url: 'https://medium.com/@arvndvv/custom-header-banner-on-your-terminal-linux-4abfe7f5b052',
+        img: 'https://miro.medium.com/max/700/0*RFUa6J68PjwTwRmo.png',
+        tags: ['Linux', 'Terminal']
+    },
+    {
+        title: 'The New GitHub Profile README.md',
+        url: 'https://medium.com/@arvndvv/the-new-github-profile-readme-md-1936b615aab7',
+        img: 'https://miro.medium.com/max/700/1*vd0eUSHd76HYg9G4Yxd1eA.gif',
+        tags: ['Github', 'Readme']
+    },
+    {
+        title: 'Making An Instagram Bot',
+        url: 'https://medium.com/@arvndvv/making-an-instagram-bot-4c6412ef00a0',
+        img: 'https://miro.medium.com/max/700/1*SLQy0rgFnPvgml9plRiq4Q.jpeg',
+        tags: ['Instagram Bot', 'Python']
+    },
+]
+window.addEventListener('load', () => {
+    blogs.forEach(blog => {
+        let blogItem = document.createElement('a');
+        blogItem.classList.add('blog-item')
+        blogItem.setAttribute('href', blog.url);
+        let blogImg = document.createElement('img');
+        blogImg.src = blog.img;
+        blogItem.appendChild(blogImg);
+        let details = document.createElement('div');
+        details.setAttribute('class', 'blog-item__details');
+        let tags = document.createElement('div');
+        tags.classList.add('tags');
+        blog.tags.forEach(tagName => {
+            let tag = document.createElement('span');
+            tag.classList.add('tag');
+            tag.textContent = tagName;
+            tags.appendChild(tag);
+        });
+        details.appendChild(tags);
+        let title = document.createElement('h1');
+        title.classList.add('blog-item__title');
+        title.textContent = blog.title;
+        details.appendChild(title);
+        blogItem.appendChild(details);
+        document.querySelector('.blog-container').appendChild(blogItem);
+    })
+
+})
