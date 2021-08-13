@@ -3198,34 +3198,34 @@ if (mobileAndTabletCheck()) {
 }
 
 //blog
-
+let domain = 'https://aravindvv.medium.com';
 let blogs = [{
         title: 'Isn’t it time to change our education system?',
-        url: 'https://medium.com/@arvndvv/isnt-it-time-to-change-our-education-system-8baa3daccf5e',
+        url: domain + '/isnt-it-time-to-change-our-education-system-8baa3daccf5e',
         img: 'https://images.pexels.com/photos/4384147/pexels-photo-4384147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
         tags: ['Education']
     },
     {
         title: "How I Tried to become famous? Why we shouldn't try this method!",
-        url: 'https://medium.com/@arvndvv/how-i-tried-to-become-famous-why-we-shouldnt-try-this-method-918ed6d41f99',
+        url: domain + '/how-i-tried-to-become-famous-why-we-shouldnt-try-this-method-918ed6d41f99',
         img: 'https://images.pexels.com/photos/2432299/pexels-photo-2432299.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
         tags: ['Life', 'Cyber']
     },
     {
         title: 'How to add Custom Header (Banner) on your Terminal (Linux)',
-        url: 'https://medium.com/@arvndvv/custom-header-banner-on-your-terminal-linux-4abfe7f5b052',
+        url: domain + '/custom-header-banner-on-your-terminal-linux-4abfe7f5b052',
         img: 'https://miro.medium.com/max/700/0*RFUa6J68PjwTwRmo.png',
         tags: ['Linux', 'Terminal']
     },
     {
         title: 'The New GitHub Profile README.md',
-        url: 'https://medium.com/@arvndvv/the-new-github-profile-readme-md-1936b615aab7',
+        url: domain + '/the-new-github-profile-readme-md-1936b615aab7',
         img: 'https://miro.medium.com/max/700/1*vd0eUSHd76HYg9G4Yxd1eA.gif',
         tags: ['Github', 'Readme']
     },
     {
         title: 'Making An Instagram Bot',
-        url: 'https://medium.com/@arvndvv/making-an-instagram-bot-4c6412ef00a0',
+        url: domain + '/making-an-instagram-bot-4c6412ef00a0',
         img: 'https://miro.medium.com/max/700/1*SLQy0rgFnPvgml9plRiq4Q.jpeg',
         tags: ['Instagram Bot', 'Python']
     },
