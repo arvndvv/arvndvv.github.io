@@ -245,6 +245,7 @@ html {
     left: -44px;
     height: 1.55em;
     background: var(--shadeOne);
+    background: url(../img/logo.svg);
     background: url(../img/logo.png);
     position: absolute;
     background-size: contain;
@@ -371,7 +372,6 @@ a .slideup {
     background-repeat: no-repeat;
     height: 10em;
     border-radius: 20em;
-    background-color: var(--light);
     filter: drop-shadow(4px 4px 10px var(--flame));
     position: relative;
     z-index: 1;
@@ -384,14 +384,7 @@ a .slideup {
     width: 65%;
 }
 
-.landing-img code {
-    position: absolute;
-    top: 50%;
-    color: #e9494b;
-    font-size: 1.25em;
-    left: 50%;
-    transform: translate(-20%, -50%);
-}
+
 
 .my-name {
     font-size: 4em;
@@ -1736,12 +1729,7 @@ footer p b {
     .landing-img img {
         width: 85%;
     }
-    .landing-img code {
-        display: none;
-    }
-    .landing-img {
-        background: transparent;
-    }
+
     .about-data-wrapper .abt-summary {
         padding: 1em 0;
         font-size: 0.9em;
