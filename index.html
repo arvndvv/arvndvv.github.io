@@ -9,25 +9,13 @@ Do not Copy without Permission!
 -->
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQKTG048FG"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-YQKTG048FG');
-    </script>
-    <link rel="icon" href="img/logo.png" type="image/png" sizes="64x64">
+    <link rel="icon" href="img/logo.svg" type="image/png" sizes="64x64">
     <meta charset="UTF-8">
     <meta name="description" content="portfolio website of full stack developer, coder, Aravind V V (arvndvv).">
     <meta name="keywords" content="HTML, CSS, Javascript, ReactJS, Python, C, C++, Programmer, Coder, Designer, UI/UX, Front End, Full Stack">
     <meta name="author" content="Aravind V V">
     <meta name="url" content="arvndvv.github.io">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arvndvv</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="./bundle/bundle.css">
@@ -51,12 +39,13 @@ Do not Copy without Permission!
                 <span class="brandname">arvndvv</span>
             </div>
             <ul class="menu">
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blog" class="nav-ctc">Blog</a></li>
-                <li><a href="#contact" class="">Contact</a></li>
+                <li class="active"><a aria-label="menu" href="#home">Home</a></li>
+                <li><a aria-label="menu" href="#about">About</a></li>
+                <li><a aria-label="menu" href="#skills">Skills</a></li>
+                <li><a aria-label="menu" href="#portfolio">Portfolio</a></li>
+                <li><a aria-label="menu" href="#blog" class="">Blog</a></li>
+                <li><a aria-label="menu" href="#contact" class="">Contact</a></li>
+                <li><a aria-label="menu" href="https://arvndvv.github.io/wordle/" class="nav-ctc" target="_blank">Play Wordle</a></li>
 
             </ul>
             <i class="fas fa-hamburger hamburger" id="hamburger" onclick="showMenu()"></i>
@@ -66,10 +55,10 @@ Do not Copy without Permission!
             <div class="landing-data">
                 <h1 class="my-name">Aravind V V</h1>
                 <h4 class="my-desig">FrontEnd Developer</h4>
-                <a href="#portfolio"><button class="btn-landing">Portfolio</button></a>
-                <a href="#contact"> <button class="btn-landing">Contact</button></a>
+                <a aria-label="ctc-buttons" href="#portfolio"><button class="btn-landing">Portfolio</button></a>
+                <a aria-label="ctc-buttons" href="#contact"> <button class="btn-landing">Contact</button></a>
             </div>
-            <div class="landing-img"><img src="./img/landing.png" alt=""></div>
+            <div class="landing-img"><img src="./img/landing.webp" alt="landing"></div>
             <svg class="landing-wave1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path  fill-opacity="1" d="M0,64L30,96C60,128,120,192,180,186.7C240,181,300,107,360,85.3C420,64,480,96,540,133.3C600,171,660,213,720,229.3C780,245,840,235,900,197.3C960,160,1020,96,1080,106.7C1140,117,1200,203,1260,229.3C1320,256,1380,224,1410,208L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
             <svg class="landing-wave2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path  fill-opacity="1" d="M0,64L30,96C60,128,120,192,180,186.7C240,181,300,107,360,85.3C420,64,480,96,540,133.3C600,171,660,213,720,229.3C780,245,840,235,900,197.3C960,160,1020,96,1080,106.7C1140,117,1200,203,1260,229.3C1320,256,1380,224,1410,208L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
 
@@ -83,16 +72,15 @@ Do not Copy without Permission!
             </div>
             <div class="about-data-wrapper">
                 <h2 class="heading">About Me</h2>
-                <h5 class="optional-desc slant">Developer | Designer</h5>
-                <p class="abt-summary">I am a technology enthusiast, designer, coder and nature lover. I'm a person who likes to constantly upgrade myself and contribute to the society. Iam in a journey of acquiring knowledge in various fields which interests me, including,
-                    designing, web developing, writing and about nature.</p>
+                <h5 class="optional-desc slant">Building stories with web.</h5>
+                <p class="abt-summary">I am Aravind. I like to cast spells on the web world. Using my magic wand (JS) I give life to the beautiful arts I draw with HTML and CSS. I am a little Tony Stark in the Hogwards of web world, I cant stay with my minimal wand. I upgrade it to be able to cast many more spells (spells A.K.A. skills are listed in the following section).</p>
                 <span class="social flex">
-                    <a href="https://www.linkedin.com/in/arvndvv/" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/arvndvv" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mont3cris7o.blogspot.com/" target="_blank"><i class="fab fa-blogger-b"></i></a>
-                    <a href="https://aravindvv.medium.com/" target="_blank"><i class="fab fa-medium-m"></i></a>
-                    <a href="https://www.instagram.com/aravind.v.v/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/arvndvv" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a aria-label="social-media" href="https://www.linkedin.com/in/arvndvv/" target="_blank"> <i class="fab fa-linkedin-in"></i></a>
+                    <a aria-label="social-media" href="https://github.com/arvndvv" target="_blank"><i class="fab fa-github"></i></a>
+                    <a aria-label="social-media" href="mont3cris7o.blogspot.com/" target="_blank"><i class="fab fa-blogger-b"></i></a>
+                    <a aria-label="social-media" href="https://aravindvv.medium.com/" target="_blank"><i class="fab fa-medium-m"></i></a>
+                    <a aria-label="social-media" href="https://www.instagram.com/aravind.v.v/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a aria-label="social-media" href="https://twitter.com/arvndvv" target="_blank"><i class="fab fa-twitter"></i></a>
 
 
 
@@ -121,7 +109,7 @@ Do not Copy without Permission!
             </ul>
             <span class="open_card" id="open_card" onclick="openCard()"><i class="fas fa-long-arrow-alt-left"></i></span>
             <span class="view project" id="port-view">
-                <img class="proj-img" src="#"></img> 
+                <img class="proj-img" src="#" alt="project-demo"></img> 
                 <div id="gallery" class="row">
                    
                   </div>
@@ -132,7 +120,7 @@ Do not Copy without Permission!
 <span class="title">Project Title</span>
             <span class="stack">Project Stacks</span>
             <span class="summary">Project Summary</span>
-            <span class="checkit"><a href="#" target="_blank">Check It</a></span>
+            <span class="checkit"><a  aria-label="project-link" href="#" target="_blank">Check It</a></span>
             <span class="proj-control">
                 <span class="prev" onclick="changeCard(-1)">Previous</span>
             <span class="count">(1/5)</span>
@@ -145,29 +133,17 @@ Do not Copy without Permission!
         <section id="blog" class="blog">
             <h2 class="heading">Blogs</h2>
             <div class="blog-container">
-                <!-- <a class="blog-item" href="#"> -->
-                <!-- <img src="https://images.pexels.com/photos/4384147/pexels-photo-4384147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""> -->
-                <!-- <img src="https://source.unsplash.com/1600x900/?education+study" alt="">
-                    <div class="blog-item__details">
-                        <div class="tags">
-                            <span class="tag">Education</span>
-
-                        </div>
-                        <h1 class="blog-item__title">Isn’t it time to change our education system?</h1>
-
-                    </div>
-                </a> -->
 
             </div>
             <span class="read-more">
-                <a href="https://medium.com/@arvndvv" >Read more...</a>
+                <a aria-label="read-more" href="https://medium.com/@arvndvv" >Read more...</a>
             </span>
         </section>
         <section id="contact" class="contact">
             <h1 class="heading">Contact Me</h1>
             <div class="contact-wrapper flex">
                 <div class="contact-details">
-                    <h3>Feel Free to Contact</h3>
+                    <!-- <h3>Feel Free to Contact</h3> -->
                     <ul>
                         <!-- <li><i class="fas fa-phone-square-alt"></i><b>Phone:</b>&nbsp;&nbsp;&nbsp;&nbsp;</li> -->
                         <li><i class="fas fa-envelope"></i><b>E-mail:</b>&nbsp;&nbsp;&nbsp;&nbsp;arvndvv@gmail.com</li>
@@ -175,28 +151,42 @@ Do not Copy without Permission!
                     </ul>
                 </div>
                 <div class="contact-form">
-                    <form method="post" id="sheetdb-form" action="https://sheetdb.io/api/v1/1n6zjkjk92rz1">
-                        <input type="text" class="input check" placeholder="Name" name="data[Name]" required>
-                        <input type="email" class="input check" placeholder="E-mail" name="data[Email]" required>
-                        <textarea placeholder="Message..." class="check" name="data[Message]" required></textarea>
-                        <input type="submit" value="Send">
+                    <form id="contact-form" action="https://formsubmit.co/ajax/b993dac45316b8eff7c43a10ad85210a">
+                        <input type="text" class="input check" placeholder="Name" name="name" required>
+                        <input type="email" class="input check" placeholder="E-mail" name="email" required>
+                        <textarea placeholder="Message..." class="check" name="message" required></textarea>
+                        <input type="submit" value="Send"/>
                     </form>
 
                 </div>
             </div>
             <footer>
-                <p>Copyright &copy; 2020 | <b>Designed and Developed by </b>Aravind V V</p>
+                <p>Copyright &copy; 2020 | <b>Designed and Developed by </b><span>Aravind V V</span></p>
 
             </footer>
         </section>
 
-        <a href="#home"><i class="fas fa-arrow-circle-up slideup" id="slideup"></i></a>
+        <a aria-label="go-up" href="#home"><i class="fas fa-arrow-circle-up slideup" id="slideup"></i></a>
     </div>
     <!--JQUERY-->
+    <script src="./bundle/jquery-3.5.1.min.js"></script>
     <!--SweetAlert CDN-->
+    <script src="./bundle/swal2.js"></script>
     <!--ConsoleStyles-->
     <script src="./bundle/bundle.js"></script>
     <!--<div style="display: none;">Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQKTG048FG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-YQKTG048FG');
+    </script>
 </body>
 
 </html>

@@ -1,3 +1,4 @@
+
 /*Loader style*/
 
 .loader {
@@ -89,20 +90,21 @@
     --dark: #171717;
     --dark-medium: #272727;
     --dark-hard: #1f1f1f;
-    --shadeOne: #ea234c;
+    --shadeOne: #eb4242;
+    --shadeOne-dark:#d9264b;
     --shadeOneLight: #ff4b70;
     --shadeTwo: #c12f31;
     --shadeThree: #10e275;
-    --light-green: #57b6ae;
-    --blueOne: #078cbf;
+    --light-green: #12f5e2;
+    --blueOne: #1792c2;
     --blueTwo: #46ccff;
     --blueThree: #39abfd;
     --blueDark: #296c8f;
-    --yellow: #ecc410;
+    --yellow: #ffe358;
     --flame: #f6b830;
     --light: #fbfdfc;
     --light-grey: #f7f7f7;
-    --medium-grey: #bfbfbf;
+    --medium-grey: #756f6f;
     --dark-grey: #333;
 }
 
@@ -114,6 +116,7 @@ body::-webkit-scrollbar {
 
 body {
     scrollbar-color: var(--dark-medium) var(--shadeOne);
+    font-size: 17px;
 }
 
 html {
@@ -209,7 +212,7 @@ html {
     color: var(--light);
     font-size: 0.75em;
     position: relative;
-    font-weight: 600;
+    /* font-weight: 600; */
     text-transform: uppercase;
     transition: 0.3s color cubic-bezier(0.4, 0, 1, 1);
 }
@@ -246,7 +249,6 @@ html {
     height: 1.55em;
     background: var(--shadeOne);
     background: url(../img/logo.svg);
-    background: url(../img/logo.png);
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
@@ -422,14 +424,14 @@ a .slideup {
 
 .btn-landing {
     padding: 10px 2em;
-    font-weight: 600;
+    /* font-weight: 600; */
     border-radius: 5px;
     font-size: 1.2em;
     margin: 4em 10px;
     transform: translateX(-10px);
     color: var(--light);
     background: transparent;
-    border: 4px solid var(--light);
+    border: 3px solid var(--light);
     cursor: pointer;
     transition: all 0.3s ease-in-out 0.1s;
 }
@@ -512,7 +514,7 @@ a .slideup {
     border-radius: 50%;
     right: 5px;
     bottom: 5px;
-    background: url(../img/me2.jpg);
+    background: url(../img/me2.webp);
     /*radial-gradient( rgba(255, 255, 255, 0.1) 55%, rgba(0, 0, 0, 0.7) 80%),*/
     background-size: 120%;
     background-position: 50% 70%;
@@ -701,13 +703,13 @@ a .slideup {
     overflow: hidden;
     position: relative;
     width: 100vw;
-    background: var(--shadeOne);
+    background: var(--shadeOne-dark);
     /*border-top: 2em solid var(--shadeOne);*/
 }
 
 .portfolio .heading {
     transform: translate(2.5em, 2em);
-    color: var(--dark-hard);
+    color: var(--yellow);
 }
 
 .portfolio .heading::before {
@@ -726,7 +728,7 @@ a .slideup {
 
 .portfolio ul li {
     margin: 15px 0;
-    color: var(--dark-hard);
+    color: var(--light);
     transition: all 0.4s ease;
     cursor: pointer;
 }
@@ -759,6 +761,8 @@ a .slideup {
     transition: all 0.2s ease;
     animation: pop 0.4s ease alternate infinite;
     font-weight: 400;
+    color: var(--light);
+
 }
 
 @keyframes pop {
@@ -1020,7 +1024,7 @@ a .slideup {
     position: absolute;
     left: 0;
     bottom: -1.5em;
-    width: 100vw;
+    width: 100vw;  
     font-size: 0.5em;
 }
 */
@@ -1032,7 +1036,7 @@ a .slideup {
     left: -0.5em;
     /* color: green; */
     bottom: -0.5em;
-    opacity: 0.3;
+    opacity: 0.1;
     width: 100vw;
     font-size: 3em;
     z-index: -1;
@@ -1059,10 +1063,21 @@ a .slideup {
     left: 0;
     top: 0;
     position: absolute;
-    background: url(../img/contact.jpg);
+    background: url(../img/contact.webp);
     background-size: cover;
     background-repeat: no-repeat;
 }
+.contact-wrapper.sending::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: var(--light);
+    opacity: 0.5;
+    }
 
 .contact-details {
     margin-top: 10%;
@@ -1100,6 +1115,7 @@ a .slideup {
     height: 100%;
 }
 
+
 .contact-form form {
     padding: 0;
     border-radius: 5px;
@@ -1132,7 +1148,7 @@ textarea {
 }
 
 .contact-form form input[type="submit"] {
-    font-weight: 900;
+    /* font-weight: 900; */
     transition: all 0.3s ease-in-out;
     background: linear-gradient(45deg, #ff5555, #fdb10c, #d84907);
     background-size: 300%;
@@ -1159,7 +1175,7 @@ footer {
     bottom: 0;
     color: var(--light-grey);
     pointer-events: none;
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 
 footer p {
@@ -1167,7 +1183,10 @@ footer p {
 }
 
 footer p b {
-    font-weight: 700;
+    font-weight: 400;
+}
+footer p span {
+    color: var(--flame);
 }
 
 
@@ -1537,7 +1556,7 @@ footer p b {
     .contact-details ul {
         margin-left: -10px;
         font-size: 1em;
-        font-weight: 600;
+        /* font-weight: 600; */
     }
     .contact-form {
         width: 100%;
@@ -1661,7 +1680,7 @@ footer p b {
     }
     footer {
         font-size: 0.8em;
-        font-weight: 500;
+        /* font-weight: 500; */
     }
     footer p b {
         display: none;
