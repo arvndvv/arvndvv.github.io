@@ -31,6 +31,9 @@ let skillitems = [{
         img: 'img/skills/angular.svg',
         name: 'Angular'
     }, {
+        img: 'img/skills/rxjs.webp',
+        name: 'RXJS'
+    }, {
         img: 'img/skills/bootstrap.svg',
         name: 'Bootstrap'
     },
@@ -854,7 +857,7 @@ let blogs = [{
     {
         title: 'The New GitHub Profile README.md',
         url: domain + '/the-new-github-profile-readme-md-1936b615aab7',
-        img: './img/blog/term.webp',
+        img: './img/blog/read.webp',
         tags: ['Github', 'Readme']
     },
     {
