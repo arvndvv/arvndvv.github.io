@@ -144,7 +144,7 @@ skillset.appendChild(skillFrag);
 //! scroll listener
 document.addEventListener("scroll", function() {
 
-    nav.style.background = "var(--dark)";
+    nav.style.background = "var(--light)";
     let scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
     //let windowHeight = window.innerHeight;
     let windowHeight = document.documentElement.clientHeight;
@@ -490,15 +490,15 @@ let particleHeight = screenHeight - abtheight;
 
 // Initialisation
 
-var canvasDiv = document.getElementById("particles");
-var options = {
-    particleColor: "#fff",
-    background: '#151419',
-    interactive: false,
-    speed: "fast",
-    density: "high"
-};
-var particleCanvas = new ParticleNetwork(canvasDiv, options);
+// var canvasDiv = document.getElementById("particles");
+// var options = {
+//     particleColor: "#fff",
+//     background: '#151419',
+//     interactive: false,
+//     speed: "fast",
+//     density: "high"
+// };
+// var particleCanvas = new ParticleNetwork(canvasDiv, options);
 
 //* project object*//
 const projects = [{

@@ -91,9 +91,12 @@
     --dark-medium: #272727;
     --dark-hard: #1f1f1f;
     --shadeOne: #eb4242;
+    /* --shadeOne: #4299eb; */
     --shadeOne-dark:#d9264b;
+    /* --shadeOne-dark:#269dd9; */
     --shadeOneLight: #ff4b70;
     --shadeTwo: #c12f31;
+    /* --shadeTwo: #2f7fc1; */
     --shadeThree: #10e275;
     --light-green: #12f5e2;
     --blueOne: #1792c2;
@@ -158,7 +161,7 @@ html {
     height: 4px;
     bottom: 0;
     left: -10px;
-    background: var(--dark-hard);
+    background: var(--shadeOne);
     position: absolute;
 }
 
@@ -181,7 +184,7 @@ html {
 .nav {
     padding: 1.4em;
     /*background: var(--dark);*/
-    color: var(--light);
+    color: var(--dark);
     position: fixed;
     width: 100%;
     z-index: 50;
@@ -209,7 +212,7 @@ html {
 .nav ul li a {
     text-decoration: none;
     pointer-events: visible;
-    color: var(--light);
+    color: var(--dark);
     font-size: 0.75em;
     position: relative;
     /* font-weight: 600; */
@@ -217,10 +220,8 @@ html {
     transition: 0.3s color cubic-bezier(0.4, 0, 1, 1);
 }
 
-.nav ul li:hover a,
-.nav ul li:hover {
+.nav ul li:hover a {
     color: var(--shadeOne);
-    -webkit-transform: scale(1.2);
 }
 
 .nav ul .active {
@@ -263,42 +264,33 @@ a .slideup {
     right: 0.5em;
     font-size: 2.5em;
     bottom: 1em;
-    color: #eb5942;
+    color: var(--shadeOne);
     z-index: 1000;
     cursor: pointer;
     opacity: 0;
     display: none;
     transition: all 0.4s ease;
-    filter: drop-shadow(0px 2px 2px var(--dark-grey));
+    /* filter: drop-shadow(0px 2px 2px var(--dark-grey)); */
 }
 
-.nav-ctc::before {
-    content: "💢";
-    font-size: 1.35em;
-    top: -3px;
-    right: -0.5em;
-    opacity: 0.7;
-    z-index: -5;
-    position: absolute;
-    transition: all 0.3s ease;
-    animation: spideysense 2s cubic-bezier(0.65, 0.05, 0.36, 1) infinite 1s;
+.nav-ctc {
+    /* background: var(--shadeOne); */
+    border: 1px solid var(--shadeOne);
+    padding: 5px;
+    color: var(--shadeOne)!important;
+    border-radius: 5px;
+    transition: 0.3s;
 }
+.nav-ctc:hover{
+    background: var(--shadeOne)!important;
+    color: var(--light)!important;
+    transform: none!important;
 
+}
 .hide {
     display: none;
 }
 
-@keyframes spideysense {
-    from {
-        transform: scale(1.4) rotate(0deg);
-    }
-    50% {
-        transform: scale(1) rotate(90deg);
-    }
-    to {
-        transform: scale(1.4) rotate(-90deg);
-    }
-}
 
 
 /* utilities ends*/
@@ -308,9 +300,9 @@ a .slideup {
 
 .landing {
     padding: calc(5vw + 1.5em);
-    background: var(--dark);
+    background: var(--light);
     height: 100vh;
-    color: var(--light);
+    color: var(--dark);
     position: relative;
     display: flex;
     overflow: hidden;
@@ -374,7 +366,7 @@ a .slideup {
     background-repeat: no-repeat;
     height: 10em;
     border-radius: 20em;
-    filter: drop-shadow(4px 4px 10px var(--flame));
+    /* filter: drop-shadow(4px 4px 10px var(--flame)); */
     position: relative;
     z-index: 1;
     transform: translate(30%, -101%);
@@ -390,12 +382,14 @@ a .slideup {
 
 .my-name {
     font-size: 4em;
+    text-shadow: -1px 1px 0px var(--light);
 }
 
 .my-name::before {
     position: absolute;
     content: "Hi, Iam";
     color: var(--dark);
+    text-shadow: none;
     width: fit-content;
     border-radius: 5px;
     font-weight: 500;
@@ -420,6 +414,8 @@ a .slideup {
 .my-desig {
     font-weight: 400;
     font-size: 1.5em;
+    text-shadow: 0px 0px 2px var(--light);
+    
 }
 
 .btn-landing {
@@ -429,38 +425,41 @@ a .slideup {
     font-size: 1.2em;
     margin: 4em 10px;
     transform: translateX(-10px);
-    color: var(--light);
-    background: transparent;
-    border: 3px solid var(--light);
+    color: var(--dark);
+    background: var(--light);
+    border: none;
+    /* border: 3px solid var(--shadeOne); */
+    box-shadow: 0px 5px 0px var(--dark-grey);
     cursor: pointer;
     transition: all 0.3s ease-in-out 0.1s;
 }
 
 .btn-landing:hover {
     color: var(--shadeTwo);
-    border: 4px solid transparent;
     background: var(--light);
+    box-shadow: 0px 3px 0px var(--dark-grey), inset 0px 1px 3px var(--medium-grey);
+
 }
 
 @keyframes rocket {
     0% {
-        filter: drop-shadow(4px 4px 10px #f2a932), ;
+        /* filter: drop-shadow(4px 4px 10px #f2a932), ; */
         transform: translate(30%, -101%) rotate(0deg);
     }
     35% {
-        filter: drop-shadow(-4px 5px 10px #ec950a), drop-shadow(-4px 10px 20px #f24832);
+        /* filter: drop-shadow(-4px 5px 10px #ec950a), drop-shadow(-4px 10px 20px #f24832); */
         transform: translate(50%, -120%) rotate(10deg);
     }
     55% {
-        filter: drop-shadow(1px 10px 15px #f28832), drop-shadow(8px 8px 15px #f24832);
+        /* filter: drop-shadow(1px 10px 15px #f28832), drop-shadow(8px 8px 15px #f24832); */
         transform: translate(50%, -200%) rotate(10deg);
     }
     85% {
-        filter: drop-shadow(4px 4px 10px #f27f32);
+        /* filter: drop-shadow(4px 4px 10px #f27f32); */
         transform: translate(50%, -180%) rotate(-10deg);
     }
     100% {
-        filter: drop-shadow(4px 4px 10px #f2a932);
+        /* filter: drop-shadow(4px 4px 10px #f2a932); */
         transform: translate(30%, -101%) rotate(0deg);
     }
 }
@@ -703,18 +702,17 @@ a .slideup {
     overflow: hidden;
     position: relative;
     width: 100vw;
-    background: var(--shadeOne-dark);
+    /* background: var(--shadeOne-dark); */
+    background: var(--light);
     /*border-top: 2em solid var(--shadeOne);*/
 }
 
 .portfolio .heading {
-    transform: translate(2.5em, 2em);
-    color: var(--yellow);
+    transform: translate(1.5em, 2em);
+    color: var(--shadeOne);
 }
 
-.portfolio .heading::before {
-    background: var(--light);
-}
+
 
 .portfolio ul {
     position: absolute;
@@ -728,7 +726,7 @@ a .slideup {
 
 .portfolio ul li {
     margin: 15px 0;
-    color: var(--light);
+    color: var(--dark);
     transition: all 0.4s ease;
     cursor: pointer;
 }
@@ -739,7 +737,7 @@ a .slideup {
 
 .portfolio ul .active {
     transform: scale(1.3)!important;
-    color: var(--light);
+    color: var(--shadeOne);
 }
 
 .portfolio ul .active::before {
@@ -748,7 +746,7 @@ a .slideup {
     height: 2px;
     bottom: -5px;
     position: absolute;
-    background: var(--light);
+    background: var(--shadeOne);
 }
 
 .open_card {
@@ -1171,10 +1169,11 @@ footer {
     position: absolute;
     /* background: lightcoral; */
     /* background: linear-gradient(45deg, #ff5555, #fdb10c, #d84907); */
-    background: var(--dark);
+    /* background: var(--dark); */
     bottom: 0;
-    color: var(--light-grey);
-    pointer-events: none;
+    color: var(--dark);
+    user-select: none;
+    /* pointer-events: none; */
     /* font-weight: 700; */
 }
 
@@ -1389,7 +1388,7 @@ footer p span {
     .nav ul {
         margin-right: 0px;
         font-size: 1.1em;
-        margin-top: 0.3em;
+        margin-top: 2.3em;
     }
     .nav-ctc::before {
         top: -8px;
@@ -1726,7 +1725,7 @@ footer p span {
     }
     .nav .hamburger {
         display: flex;
-        color: var(--light-grey);
+        color: var(--dark);
         font-size: 1.5em;
         transform: translateX(25px);
         transition: all 0.5s ease;
@@ -1941,8 +1940,8 @@ footer p span {
         top: 28px;
     }
     .my-name::after {
-        top: 49px;
-        left: 22%;
+        top: 46px;
+        left: 20%;
         height: 0px;
         border-top: 8px solid var(--flame);
         border-right: 15px solid transparent;
