@@ -828,7 +828,7 @@ a .slideup {
 }
 
 .desc-container span {
-    color: var(--light-green);
+    color: var(--light);
     margin: 10px 0;
     pointer-events: none;
     padding: 0 25%;
@@ -843,7 +843,7 @@ a .slideup {
 .desc-container .stack {
     font-size: 1em;
     font-weight: 300;
-    color: var(--blueThree);
+    color: var(--shadeOne);
 }
 
 .desc-container .summary {
@@ -856,19 +856,19 @@ a .slideup {
 
 .desc-container .checkit a {
     cursor: pointer;
-    color: var(--blueOne);
+    color: var(--light);
     transition: all 0.3s ease;
     text-decoration: none;
     pointer-events: all;
     padding: 5px 10px;
     font-size: 1.1em;
-    border: 1px solid var(--blueOne);
+    border: 1px solid var(--light);
 }
 
 .desc-container .checkit a:hover {
-    color: var(--blueTwo);
-    border: 1px solid var(--blueTwo);
-    background: var(--blueOne);
+    color: var(--shadeOne);
+    border: 1px solid var(--light-grey);
+    background: var(--light-grey);
 }
 
 .hideDesc {
@@ -1134,6 +1134,9 @@ textarea {
 .contact-form form input {
     margin: 5px 0
 }
+.contact-form form input:focus, .contact-form form textarea:focus{
+    border: 1px solid var(--shadeOne);
+}
 
 .contact-form form input:nth-child(1) {
     margin: 5px 5px 5px 0;
@@ -1148,7 +1151,8 @@ textarea {
 .contact-form form input[type="submit"] {
     /* font-weight: 900; */
     transition: all 0.3s ease-in-out;
-    background: linear-gradient(45deg, #ff5555, #fdb10c, #d84907);
+    /* background: linear-gradient(45deg, #ff5555, #fdb10c, #d84907); */
+    background: var(--shadeOne);
     background-size: 300%;
     background-position: left;
     background-repeat: no-repeat;
@@ -1195,7 +1199,7 @@ footer p span {
 /* blog starts */
 
 .blog {
-    min-height: 90vh;
+    /* min-height: 90vh; */
     padding: 5% 10%;
     position: relative;
 }
@@ -1482,7 +1486,8 @@ footer p span {
         right: 50%;
         height: 65%;
         width: 70%;
-        box-shadow: 3px 3px 4px 3px var(--shadeTwo);
+        box-shadow:none!important;
+        background: none;
     }
     .desc-container {
         transform: translate(0, -50%);
@@ -1491,6 +1496,8 @@ footer p span {
         right: 0;
         height: 80%;
         position: absolute;
+        background: var(--light);
+        box-shadow: none;
     }
     .desc-container .stack {
         font-size: 1.3em;
@@ -1503,9 +1510,18 @@ footer p span {
     .desc-container .checkit a {
         padding: 0.7em 2em;
         font-size: 1.3em;
+        color: var(--dark);
+        border-color: var(--dark);
+    }
+    .desc-container .checkit a:hover{
+        border-color: var(--shadeOne);
+        background: var(--light);
     }
     .desc-container .title {
         padding: 0 5%;
+    }
+    .desc-container span{
+        color: var(--dark);
     }
     .hideDesc {
         right: -100%!important;
@@ -1528,11 +1544,11 @@ footer p span {
     }
     .contact {
         padding: 2em 0em;
-        background: var(--dark-hard);
+        /* background: var(--dark-hard); */
     }
     .contact .heading {
         margin-left: 1.5em;
-        color: var(--light-grey);
+        /* color: var(--f); */
     }
     .contact .heading::after {
         content: "Lets Do IT!";
@@ -1550,7 +1566,8 @@ footer p span {
         flex-direction: column;
         padding: 5em 2em;
         border-radius: 5px;
-        background: rgba(30, 30, 30, 0.0);
+        background: var(--light);
+        color: var(--dark);
     }
     .contact-details ul {
         margin-left: -10px;
@@ -1561,15 +1578,20 @@ footer p span {
         width: 100%;
     }
     .contact-form form input {
-        margin: 5px 0
+        margin: 1em 0;
+        box-shadow: 0px 5px 0px var(--shadeOne);
+    }
+    .contact-form form textarea{
+        box-shadow: 0px 5px 0px var(--shadeOne);
     }
     .contact-form form input:nth-child(1) {
         margin: 5px 5px 5px 0;
     }
     .contact-wrapper::before {
-        background: var(--shadeOne);
+        background: transparent;
     }
     .contact-form form input[type="submit"] {
+        box-shadow: none;
         border: 2px solid brown;
     }
 }
@@ -1701,7 +1723,7 @@ footer p span {
         display: flex;
         flex-direction: column;
         text-align: center;
-        background: var(--dark);
+        background: var(--light);
         width: 100%;
         position: absolute;
         /* top: 70%;*/
@@ -1711,6 +1733,7 @@ footer p span {
         line-height: 2.5em;
         padding: 1em 0;
         height: 95vh;
+        margin-top: 0;
         transition: all 0.5s ease;
     }
     .nav ul li {
@@ -1827,7 +1850,7 @@ footer p span {
     }
     /*portfolio color change*/
     .portfolio {
-        background: var(--dark-hard);
+        /* background: var(--dark-hard); */
     }
     .portfolio .heading {
         color: var(--shadeOne);
@@ -1872,7 +1895,7 @@ footer p span {
     }
     .portfolio {
         height: 90vh;
-        background: var(--dark-hard);
+        /* background: var(--dark-hard); */
     }
     .portfolio ul li {
         margin-top: 10px;
